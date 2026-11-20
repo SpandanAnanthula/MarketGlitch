@@ -251,7 +251,7 @@ export const ReportsAnalytics: React.FC<ReportsAnalyticsProps> = ({
             className="px-4 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-bold shadow-sm flex items-center gap-1.5 transition-all disabled:opacity-50"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>{isExporting ? 'Exporting...' : 'Export Briefing (§9)'}</span>
+            <span>{isExporting ? 'Exporting...' : 'Export Briefing (PDF Dossier)'}</span>
           </button>
 
           <button 

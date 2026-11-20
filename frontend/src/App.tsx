@@ -18,6 +18,7 @@ import { WhatIfSimulator } from './components/WhatIfSimulator';
 import { LiveIntelligenceTicker } from './components/LiveIntelligenceTicker';
 import { ProductTour } from './components/ProductTour';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { KpiDetailModal } from './components/KpiDetailModal';
 import { api } from './services/api';
 import { TENANT_WORKSPACES } from './data/tenantWorkspaces';
 import { 
@@ -47,6 +48,7 @@ export function App() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState<boolean>(false);
   const [isWhatIfOpen, setIsWhatIfOpen] = useState<boolean>(false);
   const [isTourOpen, setIsTourOpen] = useState<boolean>(false);
+  const [isSignalsModalOpen, setIsSignalsModalOpen] = useState<boolean>(false);
 
   // Intelligence State
   const [currentProfile, setCurrentProfile] = useState<CompanyProfile | null>(TENANT_WORKSPACES['ws_electronics_default'].profile);
@@ -197,7 +199,7 @@ export function App() {
           {/* Real-time Animated Intelligence Ticker */}
           <LiveIntelligenceTicker
             timelineFilter={timelineFilter}
-            onExploreSignal={() => setCurrentTab('strategic')}
+            onExploreSignal={() => setIsSignalsModalOpen(true)}
           />
 
           {/* Top Application Header (Image 12 & 3) */}
@@ -213,7 +215,7 @@ export function App() {
             onLogout={handleLogout}
           />
 
-          {/* Public Ingestion Freshness Bar (§18 Source Governance) */}
+          {/* Public Ingestion Freshness Bar (Statutory Source Governance) */}
           <SourceFreshnessBar sources={sources} />
         </div>
 
@@ -375,6 +377,25 @@ export function App() {
           loadData();
         }}
       />
+
+      {/* Direct Strategic Signals Feed Modal from Ticker */}
+      {isSignalsModalOpen && (
+        <KpiDetailModal
+          modalType="signals"
+          onClose={() => setIsSignalsModalOpen(false)}
+          timelineFilter={timelineFilter}
+          workspaceId={currentWorkspaceId}
+          workspaceName={workspaceNames[currentWorkspaceId]}
+          signals={signals.filter(sig => {
+            if (timelineFilter === 'present_week') return sig.signal_id !== 'sig_bare_pcb_mna_consolidation';
+            if (timelineFilter === 'past_week') return ['sig_defense_rail_kavach_localization', 'sig_bare_pcb_mna_consolidation'].includes(sig.signal_id);
+            return true;
+          })}
+          timeline={timeline}
+          competitors={candidates}
+          onSelectSignal={() => setIsSignalsModalOpen(false)}
+        />
+      )}
     </div>
   </ErrorBoundary>
   );

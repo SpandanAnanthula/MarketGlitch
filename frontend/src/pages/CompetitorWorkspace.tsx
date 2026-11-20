@@ -117,7 +117,7 @@ export const CompetitorWorkspace: React.FC<CompetitorWorkspaceProps> = ({
                   )}
                 </div>
 
-                {/* Reason Code (Crucial PRD requirement from §4 & §12) */}
+                {/* Reason Code (Crucial PRD requirement from 4 & Zero-Hallucination Guardrail) */}
                 <div className="mt-3.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-xs">
                   <div className="flex items-center gap-1.5 text-emerald-400 font-semibold mb-1">
                     <Sparkles className="h-3 w-3" />

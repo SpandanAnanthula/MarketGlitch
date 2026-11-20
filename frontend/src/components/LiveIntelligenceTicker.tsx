@@ -57,10 +57,12 @@ export const LiveIntelligenceTicker: React.FC<LiveIntelligenceTickerProps> = ({
       {onExploreSignal && (
         <button
           onClick={onExploreSignal}
-          className="ml-3 hidden sm:flex items-center gap-1 text-[11px] font-bold text-indigo-400 hover:text-indigo-300 transition-colors shrink-0"
+          title="Open real-time Corroborated Strategic Signals feed"
+          className="ml-3 hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-700/60 text-[11px] font-bold text-indigo-300 hover:text-white transition-all shrink-0 group shadow-sm hover:shadow"
         >
-          <span>Signals Feed</span>
-          <ArrowRight className="w-3 h-3" />
+          <Sparkles className="w-3 h-3 text-indigo-400 group-hover:scale-110 transition-transform" />
+          <span>Strategic Signals Feed</span>
+          <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
         </button>
       )}
     </div>

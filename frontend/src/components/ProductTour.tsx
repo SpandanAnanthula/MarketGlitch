@@ -27,7 +27,7 @@ export const ProductTour: React.FC<ProductTourProps> = ({
     },
     {
       title: "Step 1: Multi-Tenant Workspace Switching",
-      subtitle: "Strict Tenant Isolation (§10)",
+      subtitle: "Strict Multi-Tenant Isolation",
       highlight: "Enterprise Account Separation",
       content: "Use the top header dropdown to switch between 3 complete manufacturing environments: Bharat EMS (Integrated SMT), NexGen EV (800V SiC Inverters), and Shakti Circuits (16-Layer Bare PCBs). All competitors, tenders, and metrics adapt dynamically.",
       badge: "A/B Testing Ready",
@@ -35,7 +35,7 @@ export const ProductTour: React.FC<ProductTourProps> = ({
     },
     {
       title: "Step 2: Verifiable Timeline Scope Filter",
-      subtitle: "Audit Cutoff & Live Updates (§18)",
+      subtitle: "Audit Cutoff & Live Updates (Statutory Verification)",
       highlight: "Prove Live Ingestion to Mentors & Judges",
       content: "Toggle between 'Present Week' (live streaming updates up to Nov 20, 2026) and 'Past Week' (strict audit cutoff at Nov 12, 2026). Watch the Market Activity Curve and competitor filings update dynamically.",
       badge: "Mentor Feedback Implemented",
@@ -43,7 +43,7 @@ export const ProductTour: React.FC<ProductTourProps> = ({
     },
     {
       title: "Step 3: Zero-Hallucination KPI Drilldowns",
-      subtitle: "100% Grounded in Official Statutory Feeds (§12)",
+      subtitle: "100% Grounded in Official Statutory Feeds",
       highlight: "Click Any KPI Tile on the Dashboard",
       content: "Click on any of the 6 Executive KPI tiles to inspect the exact considered events, BSE statutory filings, GeM tenders, and DGCIS trade series backing each number.",
       badge: "Audit Proof",

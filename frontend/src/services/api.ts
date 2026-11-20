@@ -76,7 +76,17 @@ export const api = {
   },
 
   async getCompetitorTimeline(): Promise<CompetitorEvent[]> {
-    return safeFetch('/competitors/timeline', LIVE_MARKET_DATA.timeline as CompetitorEvent[]);
+    const fallback = (LIVE_MARKET_DATA.timeline || []) as CompetitorEvent[];
+    try {
+      const data = await safeFetch<CompetitorEvent[]>('/competitors/timeline', fallback);
+      if (!Array.isArray(data) || data.length === 0) return fallback;
+      const map = new Map<string, CompetitorEvent>();
+      fallback.forEach(item => map.set(item.event_id || item.title, item));
+      data.forEach(item => map.set(item.event_id || item.title, item));
+      return Array.from(map.values()).sort((a, b) => b.event_date.localeCompare(a.event_date));
+    } catch {
+      return fallback;
+    }
   },
 
   async watchlistAction(company_entity_id: string, company_name: string, action: 'follow' | 'dismiss'): Promise<any> {

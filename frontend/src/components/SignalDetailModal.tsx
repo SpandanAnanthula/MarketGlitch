@@ -164,7 +164,7 @@ export const SignalDetailModal: React.FC<SignalDetailModalProps> = ({ signal, on
               {/* Confidence Components Bar */}
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100">
                 <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
-                  Evidence Confidence Matrix (§11 Table 15)
+                  Evidence Confidence Matrix (Multi-Source Triangulation Matrix)
                 </h4>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                   <div className="p-3 bg-white rounded-xl border border-slate-200/60">
@@ -215,7 +215,7 @@ export const SignalDetailModal: React.FC<SignalDetailModalProps> = ({ signal, on
           {activeTab === 'facts' && (
             <div className="space-y-4">
               <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/60 text-xs text-slate-600">
-                <strong>§12 Guardrail Compliance:</strong> These facts are strictly source-bound and extracted with 0 hallucination from official regulatory gazettes, stock exchange disclosures, and verified trade statistics.
+                <strong>Zero-Hallucination Guardrail Compliance:</strong> These facts are strictly source-bound and extracted with 0 hallucination from official regulatory gazettes, stock exchange disclosures, and verified trade statistics.
               </div>
               <div className="space-y-3">
                 {signal.what_happened_facts.map((fact, idx) => (
@@ -236,7 +236,7 @@ export const SignalDetailModal: React.FC<SignalDetailModalProps> = ({ signal, on
           {activeTab === 'inferences' && (
             <div className="space-y-4">
               <div className="p-3 rounded-xl bg-indigo-50/60 border border-indigo-100 text-xs text-indigo-800">
-                <strong>Strategic Inferences:</strong> Distinct hypotheses derived by applying §4 Signal Rules to the underlying facts.
+                <strong>Strategic Inferences:</strong> Distinct hypotheses derived by applying corroborated correlation rules to the underlying facts.
               </div>
               <div className="space-y-3">
                 {signal.why_it_may_matter_inferences.map((inf, idx) => (

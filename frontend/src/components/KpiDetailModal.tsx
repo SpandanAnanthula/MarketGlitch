@@ -115,7 +115,7 @@ export const KpiDetailModal: React.FC<KpiDetailModalProps> = ({
                 {modalType === 'sources' && <Database className="w-4 h-4" />}
               </span>
               <span className="text-[11px] font-bold tracking-wider uppercase text-slate-500">
-                Data Inspection Drilldown (§18 Auditable Governance)
+                Data Inspection Drilldown (Auditable Governance)
               </span>
             </div>
             
@@ -477,7 +477,7 @@ export const KpiDetailModal: React.FC<KpiDetailModalProps> = ({
           {modalType === 'sources' && (
             <div className="space-y-4">
               <p className="text-xs text-slate-600 leading-relaxed">
-                The 9 official government and public market registries actively monitored by the multi-tenant pipeline (§18 Source Governance):
+                The 9 official government and public market registries actively monitored by the multi-tenant pipeline (Statutory Source Governance):
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -514,7 +514,7 @@ export const KpiDetailModal: React.FC<KpiDetailModalProps> = ({
         {/* Modal Footer */}
         <div className="p-4 px-6 border-t border-slate-100 bg-slate-50/70 flex items-center justify-between text-xs">
           <span className="text-slate-500 font-medium">
-            Strict Zero-Hallucination Policy (§12) • 0 Ungrounded Citations Detected
+            Strict Zero-Hallucination Policy • 0 Ungrounded Citations Detected
           </span>
           <button
             onClick={onClose}

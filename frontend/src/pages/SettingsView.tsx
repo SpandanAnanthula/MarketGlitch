@@ -141,7 +141,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-xs font-bold text-slate-700">Tenant Workspace ID (§9 Multi-Tenant)</label>
+              <label className="text-xs font-bold text-slate-700">Tenant Workspace ID (Multi-Tenant)</label>
               <input type="text" value="ws_electronics_default" readOnly className="w-full px-4 py-2.5 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-mono text-slate-800" />
             </div>
           </div>
@@ -206,7 +206,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             <div className="space-y-1">
               <div className="text-sm font-bold text-emerald-950 flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-emerald-600" />
-                <span>Zero Hallucinated Citations Guardrail Enforced (§12)</span>
+                <span>Zero Hallucinated Citations Guardrail Enforced (100% Grounded)</span>
               </div>
               <p className="text-xs text-emerald-800">
                 100% of generated insights and strategic signals are mathematically verified against raw statutory source documents.

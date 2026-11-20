@@ -12,7 +12,7 @@ export const SourceRegistryView: React.FC<SourceRegistryViewProps> = ({ sources 
       <div className="p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800">
         <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">
           <Database className="h-4 w-4" />
-          <span>§18 Governance • Public Data Access Registry</span>
+          <span>Statutory Governance • Public Data Access Registry</span>
         </div>
         <h1 className="text-xl font-black text-white tracking-tight">Active Public Source Connectors & Cadence</h1>
         <p className="text-xs text-slate-400 mt-1 max-w-2xl leading-relaxed">

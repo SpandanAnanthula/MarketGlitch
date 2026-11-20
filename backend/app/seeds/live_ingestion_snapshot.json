@@ -5474,5 +5474,580 @@
       "journal_source": "The Patent Office Journal No. 46/2026",
       "source_url": "https://ipindia.gov.in/resource-links/journals/journal_46_2026.pdf#page=95"
     }
+  ],
+  "competitor_events": [
+    {
+      "event_id": "evt_ext_20261120_tata",
+      "entity_id": "comp_tata_semi",
+      "entity_name": "Tata Electronics Pvt Ltd",
+      "event_type": "capex",
+      "title": "Tata Electronics Initiates Cleanroom Tooling Delivery & Equipment Setup for Dholera Fab Phase-1",
+      "summary": "Statutory BSE disclosure confirms first batch of sub-micron photolithography and wafer-handling cleanroom robotics received at Dholera Special Investment Region (SIR) facility.",
+      "event_date": "2026-11-20",
+      "source_name": "bseindia.com",
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/tata_dholera_tooling_20261120.pdf",
+      "confidence": "High"
+    },
+    {
+      "event_id": "evt_ext_7e1cdb1c",
+      "entity_id": "comp_kaynes",
+      "entity_name": "Kaynes Technology India Ltd",
+      "event_type": "capex",
+      "title": "Kaynes Technology India schedules investor meet with Axis Capital on ...",
+      "summary": "\"Kaynes Technology India schedules investor meet with Axis Capital on Nov 23\" \u2014 Published by scanx.trade on 2026-11-19.",
+      "event_date": "2026-11-19",
+      "source_name": "scanx.trade",
+      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQ293ZFFzaXI0em9PRHFVVzQ3bkRkNTBtSll0THAzQkRjaUh6eFJnVkpwSWZEaWRqNk9tdEdPS0pLakItV3lXX1k2NzJxd3RwbkxwY0thRG1LZS1DNUZkTGVyRnBpaUE5eTY4V2xhaWhkSFNma1JJLXcxTlg1MFQ1S3M0VVJMcEZRWkpzTVdCdktpbjhFNE1LY05DZEdMZFRBWUxGZ3VkM2RqV1gyTFRjWXJxMGZubEJEZHA4bWd3WVVFdw?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: scanx.trade (Source: https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQ293ZFFzaXI0em9PRHFVVzQ3bkRkNTBtSll0THAzQkRjaUh6eFJnVkpwSWZEaWRqNk9tdEdPS0pLakItV3lXX1k2NzJxd3RwbkxwY0thRG1LZS1DNUZkTGVyRnBpaUE5eTY4V2xhaWhkSFNma1JJLXcxTlg1MFQ1S3M0VVJMcEZRWkpzTVdCdktpbjhFNE1LY05DZEdMZFRBWUxGZ3VkM2RqV1gyTFRjWXJxMGZubEJEZHA4bWd3WVVFdw?oc=5)",
+        "Event Date: 2026-11-19",
+        "Subject Entity: Kaynes Technology India Ltd",
+        "Primary Citation: Kaynes Technology India schedules investor meet with Axis Capital on Nov 23"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    },
+    {
+      "event_id": "evt_ext_daabe8dc",
+      "entity_id": "comp_dixon",
+      "entity_name": "Dixon Technologies (India) Ltd",
+      "event_type": "expansion",
+      "title": "Dixon Technologies, Syrma SGS, Kaynes Technology shares in focus toda...",
+      "summary": "\"Dixon Technologies, Syrma SGS, Kaynes Technology shares in focus today; here's why\" \u2014 Published by Business Today on 2026-11-18.",
+      "event_date": "2026-11-18",
+      "source_name": "Business Today",
+      "source_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQczhSZVR1RHlPaUZEY3NvRHpWTTVGSVJta1JaTmRQdDZVNEhlakNCZlplTXY2Q2wwLVdnXzdZS1pIRFRKZEZHX3BSOHE5TWNEVzVsUWNnM1pONVJFZVg0WFZQVU1pRjFRZEpIdXdLWGdUcVhvRGRhekJXU2E5MFE3bFh2SnFWcTJOc1Y4ZTlhSFlTSU9PR01LV3YtRDBQaHdzWmNjUXExcTJUQ1VmQU9aMmpsaHBTZl8tUG5PeFpFeXo2OGVoUDdqd3FsNERjWVVyeDdTQ25id3NGR096cnfSAeMBQVVfeXFMTUE2bkxlTVN5WVRRVXotSnFQbmtOaUhGQUNXOGFtOWdha2pBT1hRUTBHRDhtUXFEbXVzaDlDZkFHbW1VQVVNU09TazItSS1NakZQY3BJQk1Eak4yZ1c4N09DSVZncmJrdE4wRXBjd1RaYWlTU19fSmtfWFlISHlad0Jxbmc4eF9PbEtLejI2R0lHb2N6Zm1fQjVJRW5fR1lVRnh2dkRiQ0VBNDVrS20zSTdoUXBBbkdaT0k5NzNnVDZsSWdKcV9tLWVyeGZLbHlxM1VqcWQ3ZkxZS0F0eU9WM0ZIMms?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Business Today (Source: https://news.google.com/rss/articles/CBMi3gFBVV95cUxQczhSZVR1RHlPaUZEY3NvRHpWTTVGSVJta1JaTmRQdDZVNEhlakNCZlplTXY2Q2wwLVdnXzdZS1pIRFRKZEZHX3BSOHE5TWNEVzVsUWNnM1pONVJFZVg0WFZQVU1pRjFRZEpIdXdLWGdUcVhvRGRhekJXU2E5MFE3bFh2SnFWcTJOc1Y4ZTlhSFlTSU9PR01LV3YtRDBQaHdzWmNjUXExcTJUQ1VmQU9aMmpsaHBTZl8tUG5PeFpFeXo2OGVoUDdqd3FsNERjWVVyeDdTQ25id3NGR096cnfSAeMBQVVfeXFMTUE2bkxlTVN5WVRRVXotSnFQbmtOaUhGQUNXOGFtOWdha2pBT1hRUTBHRDhtUXFEbXVzaDlDZkFHbW1VQVVNU09TazItSS1NakZQY3BJQk1Eak4yZ1c4N09DSVZncmJrdE4wRXBjd1RaYWlTU19fSmtfWFlISHlad0Jxbmc4eF9PbEtLejI2R0lHb2N6Zm1fQjVJRW5fR1lVRnh2dkRiQ0VBNDVrS20zSTdoUXBBbkdaT0k5NzNnVDZsSWdKcV9tLWVyeGZLbHlxM1VqcWQ3ZkxZS0F0eU9WM0ZIMms?oc=5)",
+        "Event Date: 2026-11-18",
+        "Subject Entity: Dixon Technologies (India) Ltd",
+        "Primary Citation: Dixon Technologies, Syrma SGS, Kaynes Technology shares in focus today; here's why"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_ce7402b1",
+      "entity_id": "comp_syrma",
+      "entity_name": "Syrma SGS Technology Ltd",
+      "event_type": "capex",
+      "title": "Syrma SGS invests \u20b914.99 crore in subsidiary Syrma Kaga Electronics\" ...",
+      "summary": "\"Syrma SGS invests \u20b914.99 crore in subsidiary Syrma Kaga Electronics\" \u2014 Published by scanx.trade on 2026-11-18.",
+      "event_date": "2026-11-18",
+      "source_name": "scanx.trade",
+      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOM1c5UFlOX213OTRRY1FKTGZKbnItUTBlM0F0ZnBncTk0c2MyWXh0bmo2MXZ6b2sxSkRsUGNET3RwUU9xYnVIUFIxX0xId2lzdHJxcE5hV2lDQVM3bDV5R2hJTDRzQXNBdjZWWENJSlVwanRsLWNaQ3EyczFZY243Tjg4M3c1eUFaaWVXUGtqRmpMeGYwd0V0MUFiRmttY2RKX3FwNW1oSzNQVTY1SkJvTEtGV2Z1UFFiM1NuLQ?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: scanx.trade (Source: https://news.google.com/rss/articles/CBMivAFBVV95cUxOM1c5UFlOX213OTRRY1FKTGZKbnItUTBlM0F0ZnBncTk0c2MyWXh0bmo2MXZ6b2sxSkRsUGNET3RwUU9xYnVIUFIxX0xId2lzdHJxcE5hV2lDQVM3bDV5R2hJTDRzQXNBdjZWWENJSlVwanRsLWNaQ3EyczFZY243Tjg4M3c1eUFaaWVXUGtqRmpMeGYwd0V0MUFiRmttY2RKX3FwNW1oSzNQVTY1SkJvTEtGV2Z1UFFiM1NuLQ?oc=5)",
+        "Event Date: 2026-11-18",
+        "Subject Entity: Syrma SGS Technology Ltd",
+        "Primary Citation: Syrma SGS invests \u20b914.99 crore in subsidiary Syrma Kaga Electronics",
+        "Standardized Value: \u20b914.99 Cr ($1.78M)"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    },
+    {
+      "event_id": "evt_ext_387f7067",
+      "entity_id": "comp_tata_semi",
+      "entity_name": "Tata Electronics Pvt Ltd",
+      "event_type": "capex",
+      "title": "Tata Electronics flags supply chain, talent gaps in \u20b91.18 lakh crore ...",
+      "summary": "\"Tata Electronics flags supply chain, talent gaps in \u20b91.18 lakh crore semiconductor push\" \u2014 Published by The Hindu on 2026-11-18.",
+      "event_date": "2026-11-18",
+      "source_name": "The Hindu",
+      "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaEc3Qnc5WTFPRzZhY2t1b0xqZzRmblltbmptRjZqa1ZzTzRPc3JoaHctQXU5Q1ZCbXlTRVhyTWFrakJDTjRuU05aMU01aW1GSlJjZWdfQkh0NVR1M0wwekhfMHI5cndoS3hNb1cxaUY1Wmt1eUFRUWxkUkJzcmtpT3pEUERyZzJaZ0V3TWVNNzhoWlY2WkNzejU3MG1fYldWQk9kQnRZOUFqdXJWS214MTg5dGgzQmlVQktrb0p2UlE1VlNuNThNdDdZeVp3Rk9vR1ZMYWpqU0o3eWx2V09naNIB5wFBVV95cUxQbk9OVGhtQktmVV96VUdtWFdqbW9DN2tVUmV5RDNhYThZdnBhUU1fYmdtNURYU1Vvd05iSWoyLUhJWF9jZDhBUkN1ZUlyMzl1RUZpd3NvV0VmRGVWQ2djZlQ2NmdiZkdsdWJzM2pILThCRHA5UlZXUFd3cVI2VWJwRkpmTEN3YnR5ejUwTWFVTTZxbUdvQm8zMURBQ3Bja0pUVkF0XzlNb3JjdFQ3WlVKc3d2M1p0OFE1RzB6Y0JBNlFxcTY1dFBMS0cxZUpSTWpWaUc4Y0pnS2l1M1pDVi05bzI5YmpDTEk?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: The Hindu (Source: https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaEc3Qnc5WTFPRzZhY2t1b0xqZzRmblltbmptRjZqa1ZzTzRPc3JoaHctQXU5Q1ZCbXlTRVhyTWFrakJDTjRuU05aMU01aW1GSlJjZWdfQkh0NVR1M0wwekhfMHI5cndoS3hNb1cxaUY1Wmt1eUFRUWxkUkJzcmtpT3pEUERyZzJaZ0V3TWVNNzhoWlY2WkNzejU3MG1fYldWQk9kQnRZOUFqdXJWS214MTg5dGgzQmlVQktrb0p2UlE1VlNuNThNdDdZeVp3Rk9vR1ZMYWpqU0o3eWx2V09naNIB5wFBVV95cUxQbk9OVGhtQktmVV96VUdtWFdqbW9DN2tVUmV5RDNhYThZdnBhUU1fYmdtNURYU1Vvd05iSWoyLUhJWF9jZDhBUkN1ZUlyMzl1RUZpd3NvV0VmRGVWQ2djZlQ2NmdiZkdsdWJzM2pILThCRHA5UlZXUFd3cVI2VWJwRkpmTEN3YnR5ejUwTWFVTTZxbUdvQm8zMURBQ3Bja0pUVkF0XzlNb3JjdFQ3WlVKc3d2M1p0OFE1RzB6Y0JBNlFxcTY1dFBMS0cxZUpSTWpWaUc4Y0pnS2l1M1pDVi05bzI5YmpDTEk?oc=5)",
+        "Event Date: 2026-11-18",
+        "Subject Entity: Tata Electronics Pvt Ltd",
+        "Primary Citation: Tata Electronics flags supply chain, talent gaps in \u20b91.18 lakh crore semiconductor push",
+        "Standardized Value: \u20b9118,000.00 Cr (1.18 Lakh Cr) ($14,047.62M)"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    },
+    {
+      "event_id": "evt_ext_7a635f3a",
+      "entity_id": "comp_tata_semi",
+      "entity_name": "Tata Electronics Pvt Ltd",
+      "event_type": "capex",
+      "title": "Tata Electronics to Invest $5-6 B for Equipment in Dholera Plant\" \u2014 P...",
+      "summary": "\"Tata Electronics to Invest $5-6 B for Equipment in Dholera Plant\" \u2014 Published by Electronics For You BUSINESS on 2026-11-18.",
+      "event_date": "2026-11-18",
+      "source_name": "Electronics For You BUSINESS",
+      "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQWFPLXVKWmRwbFVOcU1GeHQ0UWtyUjhUcG9UTmY3LTJZWWY0cWtNbDVhNE15UHV4TVhPZ1BkUkdrQVVIcnlwYXJaQUMzV1NQY1IyeE1jUWxhU2NyMDFTdG9TQVhCbFQySnVQRzNqWEtVQms4UHBkajRGYTBZNktWS3ppOFhQMlRqR3U4NjJWRE5jYlJ1VFVTZlByRHMySGJFMEVOencxLWp2amFsY0pXTW5B?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Electronics For You BUSINESS (Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxOQWFPLXVKWmRwbFVOcU1GeHQ0UWtyUjhUcG9UTmY3LTJZWWY0cWtNbDVhNE15UHV4TVhPZ1BkUkdrQVVIcnlwYXJaQUMzV1NQY1IyeE1jUWxhU2NyMDFTdG9TQVhCbFQySnVQRzNqWEtVQms4UHBkajRGYTBZNktWS3ppOFhQMlRqR3U4NjJWRE5jYlJ1VFVTZlByRHMySGJFMEVOencxLWp2amFsY0pXTW5B?oc=5)",
+        "Event Date: 2026-11-18",
+        "Subject Entity: Tata Electronics Pvt Ltd",
+        "Primary Citation: Tata Electronics to Invest $5-6 B for Equipment in Dholera Plant",
+        "Standardized Value: \u20b950,400.00 Cr ($6.00B ($6,000M))",
+        "Operating Cluster: Sanand / Dholera (Sanand-Dholera Semiconductor & EV Corridor)"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    },
+    {
+      "event_id": "evt_ext_bd494b02",
+      "entity_id": "comp_tata_semi",
+      "entity_name": "Tata Electronics Pvt Ltd",
+      "event_type": "regulatory",
+      "title": "Tata Electronics bets on AI, local suppliers to strengthen chip manuf...",
+      "summary": "\"Tata Electronics bets on AI, local suppliers to strengthen chip manufacturing\" \u2014 Published by Communications Today on 2026-11-18.",
+      "event_date": "2026-11-18",
+      "source_name": "Communications Today",
+      "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdUhjLWNFQXRoMDk4elhJNkszWkV2LW8wR2VfM2dwM3gxNmxOMVhQSS0xcHZWaWF2UnoyWmQ4TkRoczJLRTlDeG5vT0RUaTREUkp3NWlPZjdydUh1czNjUVJVS2VSR1R3bUNWaF9ieUx4cVZsRTN4cUF1aUxUTlJHcTI5LUY4X0RxMTdkZndaTFlwb3BST0RPOHNvTUFrNTBPX3dzUWNRa0I0ajZGMzdaWUY5Q3h6dw?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Communications Today (Source: https://news.google.com/rss/articles/CBMitgFBVV95cUxOdUhjLWNFQXRoMDk4elhJNkszWkV2LW8wR2VfM2dwM3gxNmxOMVhQSS0xcHZWaWF2UnoyWmQ4TkRoczJLRTlDeG5vT0RUaTREUkp3NWlPZjdydUh1czNjUVJVS2VSR1R3bUNWaF9ieUx4cVZsRTN4cUF1aUxUTlJHcTI5LUY4X0RxMTdkZndaTFlwb3BST0RPOHNvTUFrNTBPX3dzUWNRa0I0ajZGMzdaWUY5Q3h6dw?oc=5)",
+        "Event Date: 2026-11-18",
+        "Subject Entity: Tata Electronics Pvt Ltd",
+        "Primary Citation: Tata Electronics bets on AI, local suppliers to strengthen chip manufacturing"
+      ],
+      "inferences": [
+        "Policy subsidy reduces domestic capex cost; strengthens price competitiveness against imports."
+      ]
+    },
+    {
+      "event_id": "evt_ext_be580103",
+      "entity_id": "comp_dixon",
+      "entity_name": "Dixon Technologies (India) Ltd",
+      "event_type": "capex",
+      "title": "Dixon Technologies lines up \u20b91,000 crore investment to expand consume...",
+      "summary": "\"Dixon Technologies lines up \u20b91,000 crore investment to expand consumer durables offerings\" \u2014 Published by Fortune India on 2026-11-17.",
+      "event_date": "2026-11-17",
+      "source_name": "Fortune India",
+      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNEZQdHJqaG5veEJNNXdEWVh0cFFkbkphWUk0bl9idzRFbl9weFpXcFRaZFNzV0syREZjbVBZYWdld2hlZTBabUtpdXBFZmloZ0VZWmVJcmFsZDB4MEV5dEp4cXY4LTA1NTYtY3d4N1A2RTBmSHRkNUNHSFQ5SjVFeTBLZ0tUWElEckFxVEtQLTNYMXpMSnAzbGlEUEhEa1RwYWpfWXdvQUZBS0ZiU3RPdkdmV0tPUWN2Znl2VWZvQnpQUUNXdzZ5cDF0ZXkzYUdEU0930gHgAUFVX3lxTE1ROHFENWVxTFZPY0RFaFVnN0c1bzJuY3JRMGNqTlo2S2hoRHhRUjhSTXZmVnpvNHAzdzEwdVBRY01Xa2VDWGJFSWFOZGtGc1hodjR1Wk0wakRyWnpVYmJmZ0J5bTFmTXNxRFpPb2pxWmU2TjZzVkxlZmR5cC1IV2Mzdy1uUjRadnI5aDg0STV3YW9HR1pCRFpJbGtpNk9RYVJvbnpmY25QNEt5X2tvdDhBaW1oZExMMzRhMFQ4OENWSGFYaFJFYks4aXJpeGlZY3JCUUdlZjd3M0UxaERwb1Ra?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Fortune India (Source: https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNEZQdHJqaG5veEJNNXdEWVh0cFFkbkphWUk0bl9idzRFbl9weFpXcFRaZFNzV0syREZjbVBZYWdld2hlZTBabUtpdXBFZmloZ0VZWmVJcmFsZDB4MEV5dEp4cXY4LTA1NTYtY3d4N1A2RTBmSHRkNUNHSFQ5SjVFeTBLZ0tUWElEckFxVEtQLTNYMXpMSnAzbGlEUEhEa1RwYWpfWXdvQUZBS0ZiU3RPdkdmV0tPUWN2Znl2VWZvQnpQUUNXdzZ5cDF0ZXkzYUdEU0930gHgAUFVX3lxTE1ROHFENWVxTFZPY0RFaFVnN0c1bzJuY3JRMGNqTlo2S2hoRHhRUjhSTXZmVnpvNHAzdzEwdVBRY01Xa2VDWGJFSWFOZGtGc1hodjR1Wk0wakRyWnpVYmJmZ0J5bTFmTXNxRFpPb2pxWmU2TjZzVkxlZmR5cC1IV2Mzdy1uUjRadnI5aDg0STV3YW9HR1pCRFpJbGtpNk9RYVJvbnpmY25QNEt5X2tvdDhBaW1oZExMMzRhMFQ4OENWSGFYaFJFYks4aXJpeGlZY3JCUUdlZjd3M0UxaERwb1Ra?oc=5)",
+        "Event Date: 2026-11-17",
+        "Subject Entity: Dixon Technologies (India) Ltd",
+        "Primary Citation: Dixon Technologies lines up \u20b91,000 crore investment to expand consumer durables offerings",
+        "Standardized Value: \u20b91,000.00 Cr ($119.05M)",
+        "Operating Cluster: Noida (Noida EMC 2.0 Electronics Cluster)"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    },
+    {
+      "event_id": "evt_ext_4bf1a853",
+      "entity_id": "comp_kaynes",
+      "entity_name": "Kaynes Technology India Ltd",
+      "event_type": "expansion",
+      "title": "Kaynes Technology Q2 Earnings: Semiconductor pipeline exceeds two bil...",
+      "summary": "\"Kaynes Technology Q2 Earnings: Semiconductor pipeline exceeds two billion components\" \u2014 Published by CRN Asia on 2026-11-16.",
+      "event_date": "2026-11-16",
+      "source_name": "CRN Asia",
+      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOOU55aXJpdHZ2YW5ocDhUcFRqc0Q3UG1xWVRUNnlBSFpCUTFPaGZ4cjBwTmZBMEhfbWhnNjRXLU5PY09sMjJFVXY0akxrUG9wNmhKaHYyakk1UGhYbTB3VHlhejB2ektBaThDYzlGT0ZRRk1qdlBGcTNtejJKOXNsVE1uWmpkQVhIN2tuT3JyMWdJanpJb2l2SjFUWlZNcmpFN2RtNlYzN2x5ZklMcDB5SE1oSU9WZFJCYnNsY3I1aDU?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: CRN Asia (Source: https://news.google.com/rss/articles/CBMiwAFBVV95cUxOOU55aXJpdHZ2YW5ocDhUcFRqc0Q3UG1xWVRUNnlBSFpCUTFPaGZ4cjBwTmZBMEhfbWhnNjRXLU5PY09sMjJFVXY0akxrUG9wNmhKaHYyakk1UGhYbTB3VHlhejB2ektBaThDYzlGT0ZRRk1qdlBGcTNtejJKOXNsVE1uWmpkQVhIN2tuT3JyMWdJanpJb2l2SjFUWlZNcmpFN2RtNlYzN2x5ZklMcDB5SE1oSU9WZFJCYnNsY3I1aDU?oc=5)",
+        "Event Date: 2026-11-16",
+        "Subject Entity: Kaynes Technology India Ltd",
+        "Primary Citation: Kaynes Technology Q2 Earnings: Semiconductor pipeline exceeds two billion components"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_e77d28b3",
+      "entity_id": "comp_dixon",
+      "entity_name": "Dixon Technologies (India) Ltd",
+      "event_type": "expansion",
+      "title": "Dixon eyes deeper manufacturing cost cuts in FY28 as automation gathe...",
+      "summary": "\"Dixon eyes deeper manufacturing cost cuts in FY28 as automation gathers pace\" \u2014 Published by Moneycontrol.com on 2026-11-16.",
+      "event_date": "2026-11-16",
+      "source_name": "Moneycontrol.com",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQVlZOQmluTXJCQ3NkeXNGVEJOb1pOT1BwNTNkZ1Nwb3FoTmlaUFhpXzZ4anRzMWN2QlVzQjluTjlvWk9DdlJGcHpVMk5UZDJ4SUJuZVJoVThiM2VWSl8xSFRNTUNNXzhpTjQzWlBpdy14T0hTMVJVcHYyTE0tOHgxZnhGQU44Nkh2Vk9ISDBhTHNWZlR4czVLZG5YcldYNUZSakR2bktUNllXU2FiN1hmbjNVZzgxR2JrdkRIRm9sX0ZWYkZhMGN6UmVfUFZ3d9IB0wFBVV95cUxOdGFEa29meFhEb052SjVZRVhrTkdxdFE3VUpEQjMzU05GU1ZUd3dlNUtKbUt4V0xrV181cG9SUHZodVpRT0pIM0NpQS1mcWIyTzBLSFVHUlBZdHdrSUlOVFI3OXZmbFdDOE4wbElFaUNpMDdaRUVZNmoxZ0J5M0ZhOGFzeE1nOElNQVhVR2w1Zkx6d1dnTzZ0RElqQ2F1MU1Pd0ZzZVNJeGU1UmxnNDVDVkxteGhuRk13WWJ4MjZlelhlUTMzTGhHOGY1NWZLRXI3VU5z?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Moneycontrol.com (Source: https://news.google.com/rss/articles/CBMizgFBVV95cUxQVlZOQmluTXJCQ3NkeXNGVEJOb1pOT1BwNTNkZ1Nwb3FoTmlaUFhpXzZ4anRzMWN2QlVzQjluTjlvWk9DdlJGcHpVMk5UZDJ4SUJuZVJoVThiM2VWSl8xSFRNTUNNXzhpTjQzWlBpdy14T0hTMVJVcHYyTE0tOHgxZnhGQU44Nkh2Vk9ISDBhTHNWZlR4czVLZG5YcldYNUZSakR2bktUNllXU2FiN1hmbjNVZzgxR2JrdkRIRm9sX0ZWYkZhMGN6UmVfUFZ3d9IB0wFBVV95cUxOdGFEa29meFhEb052SjVZRVhrTkdxdFE3VUpEQjMzU05GU1ZUd3dlNUtKbUt4V0xrV181cG9SUHZodVpRT0pIM0NpQS1mcWIyTzBLSFVHUlBZdHdrSUlOVFI3OXZmbFdDOE4wbElFaUNpMDdaRUVZNmoxZ0J5M0ZhOGFzeE1nOElNQVhVR2w1Zkx6d1dnTzZ0RElqQ2F1MU1Pd0ZzZVNJeGU1UmxnNDVDVkxteGhuRk13WWJ4MjZlelhlUTMzTGhHOGY1NWZLRXI3VU5z?oc=5)",
+        "Event Date: 2026-11-16",
+        "Subject Entity: Dixon Technologies (India) Ltd",
+        "Primary Citation: Dixon eyes deeper manufacturing cost cuts in FY28 as automation gathers pace"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_d11175a6",
+      "entity_id": "unassigned",
+      "entity_name": "Public Procurement Portal (GeM / CPPP)",
+      "event_type": "tender",
+      "title": "Tender CPPP/2026/DRDO/90822: Fabrication and Micro-Packaging of X-Ban...",
+      "summary": "\"Tender CPPP/2026/DRDO/90822: Fabrication and Micro-Packaging of X-Band Gallium Nitride (GaN) Solid-State Power Amplifier Modules\" \u2014 Published by CPPP Procurement Portal on 2026-11-16.",
+      "event_date": "2026-11-16",
+      "source_name": "CPPP Procurement Portal",
+      "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndTenderDetailsPage&tenderId=90822",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: CPPP Procurement Portal (Source: https://eprocure.gov.in/eprocure/app?page=FrontEndTenderDetailsPage&tenderId=90822)",
+        "Event Date: 2026-11-16",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Tender CPPP/2026/DRDO/90822: Fabrication and Micro-Packaging of X-Band Gallium Nitride (GaN) Solid-State Power Amplifier Modules",
+        "Standardized Value: \u20b926.40 Cr ($3.14M)",
+        "Operating Cluster: Gurugram / NCR (NCR Industrial & Auto Hub)"
+      ],
+      "inferences": [
+        "Public procurement opportunity; indicates active demand from state or defense buyers."
+      ]
+    },
+    {
+      "event_id": "evt_ext_c28315ad",
+      "entity_id": "unassigned",
+      "entity_name": "DGCIS Directorate of Trade Statistics",
+      "event_type": "trade",
+      "title": "DGCIS Trade Series: HS 8542 - Electronic Integrated Circuits and Micr...",
+      "summary": "\"DGCIS Trade Series: HS 8542 - Electronic Integrated Circuits and Microassemblies\" \u2014 Published by Directorate General of Commercial Intelligence and Statistics (DGCIS) on 2026-11-15.",
+      "event_date": "2026-11-15",
+      "source_name": "Directorate General of Commercial Intelligence and Statistics (DGCIS)",
+      "source_url": "https://trade-analytics.commerce.gov.in/public/de/commodity/8542",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Directorate General of Commercial Intelligence and Statistics (DGCIS) (Source: https://trade-analytics.commerce.gov.in/public/de/commodity/8542)",
+        "Event Date: 2026-11-15",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: DGCIS Trade Series: HS 8542 - Electronic Integrated Circuits and Microassemblies",
+        "Standardized Value: \u20b9124,320.00 Cr ($14.80B)"
+      ],
+      "inferences": [
+        "Macro customs movement shows domestic demand trajectory and import dependence shifts."
+      ]
+    },
+    {
+      "event_id": "evt_ext_eed2430a",
+      "entity_id": "unassigned",
+      "entity_name": "DGCIS Directorate of Trade Statistics",
+      "event_type": "trade",
+      "title": "DGCIS Trade Series: HS 8541 - Diodes, Transistors, Photosensitive Sem...",
+      "summary": "\"DGCIS Trade Series: HS 8541 - Diodes, Transistors, Photosensitive Semiconductor Devices & LEDs\" \u2014 Published by Directorate General of Commercial Intelligence and Statistics (DGCIS) on 2026-11-15.",
+      "event_date": "2026-11-15",
+      "source_name": "Directorate General of Commercial Intelligence and Statistics (DGCIS)",
+      "source_url": "https://trade-analytics.commerce.gov.in/public/de/commodity/8541",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Directorate General of Commercial Intelligence and Statistics (DGCIS) (Source: https://trade-analytics.commerce.gov.in/public/de/commodity/8541)",
+        "Event Date: 2026-11-15",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: DGCIS Trade Series: HS 8541 - Diodes, Transistors, Photosensitive Semiconductor Devices & LEDs",
+        "Standardized Value: \u20b945,360.00 Cr ($5.40B)"
+      ],
+      "inferences": [
+        "Macro customs movement shows domestic demand trajectory and import dependence shifts."
+      ]
+    },
+    {
+      "event_id": "evt_ext_14209159",
+      "entity_id": "comp_kaynes",
+      "entity_name": "Kaynes Technology India Ltd",
+      "event_type": "partnership",
+      "title": "US' Vishay Intertechnology, Kaynes Semicon form India JV for chip man...",
+      "summary": "\"US' Vishay Intertechnology, Kaynes Semicon form India JV for chip manufacturing\" \u2014 Published by electronics.economictimes.indiatimes.com on 2026-11-14.",
+      "event_date": "2026-11-14",
+      "source_name": "electronics.economictimes.indiatimes.com",
+      "source_url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNR3Iwc3l6aEdPd1I0LUQ3S0VMZV9oOU1fSXVKQkItUXk5NXd3Mm9pblI0eDdncTFFeGx2WDRMNUxCbVVMbUtPcTdiWllmVFFRYzhXNndsVkNGRVQ2N0NzRlJidUk3dklUN3c4c21lb2Z3Zkw1MXI5Q0dZUDEzRXlCNUZYZUhfd3JhcTJxd24zSHlrVWVZWEdDU0ZjNU9jcG5EempZcm1IMkpaX1JqQkptRk9kOG5JSThlaFdBS25SeHJjUUpOdGxWQU5GZU9nUnU0dlM4aFVqMG9sSFhPRHpOLXJERk5tTHl1aDBjSC1lbGd5UjFFNWfSAfABQVVfeXFMTmRJNTRJNFJkZkxoMkFiXzRhVDdPcG5WUjlObFgtQXJUSzc2aVZmbFQxdXVpM0xHQWRGRzJ4ZWJySGhscThDLXd2TFk2dndwUk9wN3VWT1JQRElEb1VPRFNZZTZ0WHJPMzZSM2lra1V2bk9kQ2o3UkduaEpLWlZ3ckdrdUU3d0NsMEY2Y0gwY2NZNHNQM3ltTDczdm5Iek01Nll5R25ZdTdidG9id2t5bjg0SnpMZS1uTjVJSEY5c2JXOE5xQ3I0RnVKVm13R2Z5ZDA0SndKSEUzQmdKNmpjOHU5NnJubXR4VjlWY1hyMDJm?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: electronics.economictimes.indiatimes.com (Source: https://news.google.com/rss/articles/CBMi9gFBVV95cUxNR3Iwc3l6aEdPd1I0LUQ3S0VMZV9oOU1fSXVKQkItUXk5NXd3Mm9pblI0eDdncTFFeGx2WDRMNUxCbVVMbUtPcTdiWllmVFFRYzhXNndsVkNGRVQ2N0NzRlJidUk3dklUN3c4c21lb2Z3Zkw1MXI5Q0dZUDEzRXlCNUZYZUhfd3JhcTJxd24zSHlrVWVZWEdDU0ZjNU9jcG5EempZcm1IMkpaX1JqQkptRk9kOG5JSThlaFdBS25SeHJjUUpOdGxWQU5GZU9nUnU0dlM4aFVqMG9sSFhPRHpOLXJERk5tTHl1aDBjSC1lbGd5UjFFNWfSAfABQVVfeXFMTmRJNTRJNFJkZkxoMkFiXzRhVDdPcG5WUjlObFgtQXJUSzc2aVZmbFQxdXVpM0xHQWRGRzJ4ZWJySGhscThDLXd2TFk2dndwUk9wN3VWT1JQRElEb1VPRFNZZTZ0WHJPMzZSM2lra1V2bk9kQ2o3UkduaEpLWlZ3ckdrdUU3d0NsMEY2Y0gwY2NZNHNQM3ltTDczdm5Iek01Nll5R25ZdTdidG9id2t5bjg0SnpMZS1uTjVJSEY5c2JXOE5xQ3I0RnVKVm13R2Z5ZDA0SndKSEUzQmdKNmpjOHU5NnJubXR4VjlWY1hyMDJm?oc=5)",
+        "Event Date: 2026-11-14",
+        "Subject Entity: Kaynes Technology India Ltd",
+        "Primary Citation: US' Vishay Intertechnology, Kaynes Semicon form India JV for chip manufacturing"
+      ],
+      "inferences": [
+        "Indicates strategic technology access or supply chain localization; potential shift in component sourcing."
+      ]
+    },
+    {
+      "event_id": "evt_ext_a6305542",
+      "entity_id": "unassigned",
+      "entity_name": "Public Procurement Portal (GeM / CPPP)",
+      "event_type": "tender",
+      "title": "Tender GEM/2026/B/8771902: Procurement of Silicon Carbide (SiC) Power...",
+      "summary": "\"Tender GEM/2026/B/8771902: Procurement of Silicon Carbide (SiC) Power Module Test Benches for High-Voltage Electric Bus Inverters\" \u2014 Published by GeM Procurement Portal on 2026-11-14.",
+      "event_date": "2026-11-14",
+      "source_name": "GeM Procurement Portal",
+      "source_url": "https://bidplus-global.gem.gov.in/bidlists/GEM-2026-B-8771902",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: GeM Procurement Portal (Source: https://bidplus-global.gem.gov.in/bidlists/GEM-2026-B-8771902)",
+        "Event Date: 2026-11-14",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Tender GEM/2026/B/8771902: Procurement of Silicon Carbide (SiC) Power Module Test Benches for High-Voltage Electric Bus Inverters",
+        "Standardized Value: \u20b912.80 Cr ($1.52M)",
+        "Operating Cluster: Gurugram / NCR (NCR Industrial & Auto Hub)"
+      ],
+      "inferences": [
+        "Public procurement opportunity; indicates active demand from state or defense buyers."
+      ]
+    },
+    {
+      "event_id": "evt_ext_0774ffd2",
+      "entity_id": "comp_tata_semi",
+      "entity_name": "Tata Electronics Pvt Ltd",
+      "event_type": "patent",
+      "title": "Patent IN-PAT-2026-42518: Graphene-Enhanced Sintered Silver Thermal I...",
+      "summary": "\"Patent IN-PAT-2026-42518: Graphene-Enhanced Sintered Silver Thermal Interface Material for High-Reliability OSAT Packaging\" \u2014 Published by Controller General of Patents, Designs and Trade Marks (IP India) on 2026-11-13.",
+      "event_date": "2026-11-13",
+      "source_name": "Controller General of Patents, Designs and Trade Marks (IP India)",
+      "source_url": "https://ipindia.gov.in/resource-links/journals/journal_46_2026.pdf#page=95",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Controller General of Patents, Designs and Trade Marks (IP India) (Source: https://ipindia.gov.in/resource-links/journals/journal_46_2026.pdf#page=95)",
+        "Event Date: 2026-11-13",
+        "Subject Entity: Tata Electronics Pvt Ltd",
+        "Primary Citation: Patent IN-PAT-2026-42518: Graphene-Enhanced Sintered Silver Thermal Interface Material for High-Reliability OSAT Packaging"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_485cec3b",
+      "entity_id": "unassigned",
+      "entity_name": "Ministry of Electronics & IT (MeitY)",
+      "event_type": "regulatory",
+      "title": "Public Procurement Preference (Make in India) Order: Revision of Mand...",
+      "summary": "\"Public Procurement Preference (Make in India) Order: Revision of Mandatory DVA for Smart Meters & Telecom Hardware\" \u2014 Published by Department for Promotion of Industry and Internal Trade (DPIIT) on 2026-11-10.",
+      "event_date": "2026-11-10",
+      "source_name": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+      "source_url": "https://dpiit.gov.in/public-procurement-orders/make-in-india-electronics-2026",
+      "confidence": "Medium",
+      "facts": [
+        "Event Publisher: Department for Promotion of Industry and Internal Trade (DPIIT) (Source: https://dpiit.gov.in/public-procurement-orders/make-in-india-electronics-2026)",
+        "Event Date: 2026-11-10",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Public Procurement Preference (Make in India) Order: Revision of Mandatory DVA for Smart Meters & Telecom Hardware"
+      ],
+      "inferences": [
+        "Policy subsidy reduces domestic capex cost; strengthens price competitiveness against imports."
+      ]
+    },
+    {
+      "event_id": "evt_ext_725c835b",
+      "entity_id": "unassigned",
+      "entity_name": "Public Procurement Portal (GeM / CPPP)",
+      "event_type": "tender",
+      "title": "Tender GEM/2026/B/8912401: Supply and Testing of High-Reliability Mul...",
+      "summary": "\"Tender GEM/2026/B/8912401: Supply and Testing of High-Reliability Multilayer SMT PCB Assemblies for Kavach Collision Avoidance System\" \u2014 Published by GeM Procurement Portal on 2026-11-09.",
+      "event_date": "2026-11-09",
+      "source_name": "GeM Procurement Portal",
+      "source_url": "https://bidplus-global.gem.gov.in/bidlists/GEM-2026-B-8912401",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: GeM Procurement Portal (Source: https://bidplus-global.gem.gov.in/bidlists/GEM-2026-B-8912401)",
+        "Event Date: 2026-11-09",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Tender GEM/2026/B/8912401: Supply and Testing of High-Reliability Multilayer SMT PCB Assemblies for Kavach Collision Avoidance System",
+        "Standardized Value: \u20b942.50 Cr ($5.06M)",
+        "Operating Cluster: Bengaluru / Mysuru (Bengaluru-Mysuru High-Tech Corridor)"
+      ],
+      "inferences": [
+        "Public procurement opportunity; indicates active demand from state or defense buyers."
+      ]
+    },
+    {
+      "event_id": "evt_ext_a4d8b188",
+      "entity_id": "comp_kaynes",
+      "entity_name": "Kaynes Technology India Ltd",
+      "event_type": "patent",
+      "title": "Patent IN-PAT-2026-41092: High Thermal Dissipation Direct-Bonded Copp...",
+      "summary": "\"Patent IN-PAT-2026-41092: High Thermal Dissipation Direct-Bonded Copper Substrate for Automotive Power Inverters\" \u2014 Published by Controller General of Patents, Designs and Trade Marks (IP India) on 2026-11-06.",
+      "event_date": "2026-11-06",
+      "source_name": "Controller General of Patents, Designs and Trade Marks (IP India)",
+      "source_url": "https://ipindia.gov.in/resource-links/journals/journal_45_2026.pdf#page=114",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Controller General of Patents, Designs and Trade Marks (IP India) (Source: https://ipindia.gov.in/resource-links/journals/journal_45_2026.pdf#page=114)",
+        "Event Date: 2026-11-06",
+        "Subject Entity: Kaynes Technology India Ltd",
+        "Primary Citation: Patent IN-PAT-2026-41092: High Thermal Dissipation Direct-Bonded Copper Substrate for Automotive Power Inverters"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_20261104_kaynes",
+      "entity_id": "comp_kaynes",
+      "entity_name": "Kaynes Technology India Ltd",
+      "event_type": "capex",
+      "title": "Kaynes Breaks Ground on \u20b93,300 Cr OSAT Semiconductor Packaging Facility in Sanand",
+      "summary": "Formal foundation ceremony held in Sanand Semiconductor Corridor; plant designed to package 60M discrete and power modules annually under ISM subsidies.",
+      "event_date": "2026-11-04",
+      "source_name": "bseindia.com",
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/kaynes_sanand_groundbreaking.pdf",
+      "confidence": "High"
+    },
+    {
+      "event_id": "evt_ext_e0a79364",
+      "entity_id": "comp_amber",
+      "entity_name": "Amber Enterprises (Ascent Circuits)",
+      "event_type": "expansion",
+      "title": "Amber subsidiary IL JIN completes full acquisition of Ascent Circuits...",
+      "summary": "\"Amber subsidiary IL JIN completes full acquisition of Ascent Circuits\" \u2014 Published by scanx.trade on 2026-11-03.",
+      "event_date": "2026-11-03",
+      "source_name": "scanx.trade",
+      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcXNjX2pjRzNyRmFEU085NkR3b0FleVhMbjVuR0stTXJveU9DMWFDSy04eDQ1WHByeHFLRVdseXA3Z3B1NjVVNm9oRXhZTm5OQWswUFVnajB5N1JUck5wVm5ZN3pnaUtWWE1xWkRmV0c5Mjd4SVMySzNUTEJUT01CRVFOYnFtNTVFSnQyNTd0Y0FHRVh4ZVBhd1NyWWpfQWdEMG8tTTVEaWVZakxsSzRWREUzbHZaa0lOOEMzd2xTVlI?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: scanx.trade (Source: https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcXNjX2pjRzNyRmFEU085NkR3b0FleVhMbjVuR0stTXJveU9DMWFDSy04eDQ1WHByeHFLRVdseXA3Z3B1NjVVNm9oRXhZTm5OQWswUFVnajB5N1JUck5wVm5ZN3pnaUtWWE1xWkRmV0c5Mjd4SVMySzNUTEJUT01CRVFOYnFtNTVFSnQyNTd0Y0FHRVh4ZVBhd1NyWWpfQWdEMG8tTTVEaWVZakxsSzRWREUzbHZaa0lOOEMzd2xTVlI?oc=5)",
+        "Event Date: 2026-11-03",
+        "Subject Entity: Amber Enterprises (Ascent Circuits)",
+        "Primary Citation: Amber subsidiary IL JIN completes full acquisition of Ascent Circuits"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_e0699be7",
+      "entity_id": "unassigned",
+      "entity_name": "Public Procurement Portal (GeM / CPPP)",
+      "event_type": "tender",
+      "title": "Tender CPPP/2026/MEITY/55410: Supply, Erection and Commissioning of A...",
+      "summary": "\"Tender CPPP/2026/MEITY/55410: Supply, Erection and Commissioning of Automated High-Speed 3D Optical Inspection (AOI) & Flying Probe Testers\" \u2014 Published by CPPP Procurement Portal on 2026-11-02.",
+      "event_date": "2026-11-02",
+      "source_name": "CPPP Procurement Portal",
+      "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndTenderDetailsPage&tenderId=55410",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: CPPP Procurement Portal (Source: https://eprocure.gov.in/eprocure/app?page=FrontEndTenderDetailsPage&tenderId=55410)",
+        "Event Date: 2026-11-02",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Tender CPPP/2026/MEITY/55410: Supply, Erection and Commissioning of Automated High-Speed 3D Optical Inspection (AOI) & Flying Probe Testers",
+        "Standardized Value: \u20b918.20 Cr ($2.17M)",
+        "Operating Cluster: Sriperumbudur / Chennai (Tamil Nadu Electronics & Auto Corridor)"
+      ],
+      "inferences": [
+        "Public procurement opportunity; indicates active demand from state or defense buyers."
+      ]
+    },
+    {
+      "event_id": "evt_ext_59e383f8",
+      "entity_id": "unassigned",
+      "entity_name": "Ministry of Electronics & IT (MeitY)",
+      "event_type": "regulatory",
+      "title": "Disbursement of \u20b92,450 Cr Production Linked Incentives under PLI 2.0 ...",
+      "summary": "\"Disbursement of \u20b92,450 Cr Production Linked Incentives under PLI 2.0 for Electronic Components\" \u2014 Published by Ministry of Electronics & Information Technology (MeitY) on 2026-11-01.",
+      "event_date": "2026-11-01",
+      "source_name": "Ministry of Electronics & Information Technology (MeitY)",
+      "source_url": "https://www.meity.gov.in/esdm/pli-electronic-components-notification-2026",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Ministry of Electronics & Information Technology (MeitY) (Source: https://www.meity.gov.in/esdm/pli-electronic-components-notification-2026)",
+        "Event Date: 2026-11-01",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Disbursement of \u20b92,450 Cr Production Linked Incentives under PLI 2.0 for Electronic Components",
+        "Standardized Value: \u20b92,450.00 Cr ($291.67M)"
+      ],
+      "inferences": [
+        "Policy subsidy reduces domestic capex cost; strengthens price competitiveness against imports."
+      ]
+    },
+    {
+      "event_id": "evt_ext_2a044e71",
+      "entity_id": "comp_dixon",
+      "entity_name": "Dixon Technologies (India) Ltd",
+      "event_type": "expansion",
+      "title": "How Dixon Technologies Became India\u2019s Electronics Manufacturing Bet\" ...",
+      "summary": "\"How Dixon Technologies Became India\u2019s Electronics Manufacturing Bet\" \u2014 Published by HDFC Sky on 2026-10-28.",
+      "event_date": "2026-10-28",
+      "source_name": "HDFC Sky",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTmk2UTA5X3RyLTZvbzlkZEJjUjhUQUF2aFI0dTc3UHVxQllDcmNhT2tXY3IyNFNqb0V1VXZZZUtzMUt3M3RIM1ozb1Z6TURkWEVpWFB5LXJ2bUlXamd3Y3hjdU15LTlBa0YxOUlwTDJPU3Y0OGYyRXd6X2I4aHZxWElFVVc1WWh1YlBFdE56UDRaaFpzckhqNUllUF9Hd0ZvR290MWpZTE5OaTB4SmhJTTlnRS0?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: HDFC Sky (Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTmk2UTA5X3RyLTZvbzlkZEJjUjhUQUF2aFI0dTc3UHVxQllDcmNhT2tXY3IyNFNqb0V1VXZZZUtzMUt3M3RIM1ozb1Z6TURkWEVpWFB5LXJ2bUlXamd3Y3hjdU15LTlBa0YxOUlwTDJPU3Y0OGYyRXd6X2I4aHZxWElFVVc1WWh1YlBFdE56UDRaaFpzckhqNUllUF9Hd0ZvR290MWpZTE5OaTB4SmhJTTlnRS0?oc=5)",
+        "Event Date: 2026-10-28",
+        "Subject Entity: Dixon Technologies (India) Ltd",
+        "Primary Citation: How Dixon Technologies Became India\u2019s Electronics Manufacturing Bet"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_699031d5",
+      "entity_id": "comp_syrma",
+      "entity_name": "Syrma SGS Technology Ltd",
+      "event_type": "patent",
+      "title": "Patent IN-PAT-2026-38914: Automated Low-Void Solder Paste Deposition ...",
+      "summary": "\"Patent IN-PAT-2026-38914: Automated Low-Void Solder Paste Deposition Method for Micro-BGA Packages\" \u2014 Published by Controller General of Patents, Designs and Trade Marks (IP India) on 2026-10-23.",
+      "event_date": "2026-10-23",
+      "source_name": "Controller General of Patents, Designs and Trade Marks (IP India)",
+      "source_url": "https://ipindia.gov.in/resource-links/journals/journal_43_2026.pdf#page=82",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: Controller General of Patents, Designs and Trade Marks (IP India) (Source: https://ipindia.gov.in/resource-links/journals/journal_43_2026.pdf#page=82)",
+        "Event Date: 2026-10-23",
+        "Subject Entity: Syrma SGS Technology Ltd",
+        "Primary Citation: Patent IN-PAT-2026-38914: Automated Low-Void Solder Paste Deposition Method for Micro-BGA Packages"
+      ],
+      "inferences": []
+    },
+    {
+      "event_id": "evt_ext_83f07b82",
+      "entity_id": "unassigned",
+      "entity_name": "Ministry of Electronics & IT (MeitY)",
+      "event_type": "regulatory",
+      "title": "Scheme for Promotion of Manufacturing of Electronic Components and Se...",
+      "summary": "\"Scheme for Promotion of Manufacturing of Electronic Components and Semiconductors (SPECS 2.0)\" \u2014 Published by DPIIT & MeitY on 2026-10-18.",
+      "event_date": "2026-10-18",
+      "source_name": "DPIIT & MeitY",
+      "source_url": "https://www.meity.gov.in/specs-guidelines-revised",
+      "confidence": "Medium",
+      "facts": [
+        "Event Publisher: DPIIT & MeitY (Source: https://www.meity.gov.in/specs-guidelines-revised)",
+        "Event Date: 2026-10-18",
+        "Subject Entity: Indian Electronics Ecosystem",
+        "Primary Citation: Scheme for Promotion of Manufacturing of Electronic Components and Semiconductors (SPECS 2.0)"
+      ],
+      "inferences": [
+        "Policy subsidy reduces domestic capex cost; strengthens price competitiveness against imports."
+      ]
+    },
+    {
+      "event_id": "evt_ext_6eab0621",
+      "entity_id": "comp_syrma",
+      "entity_name": "Syrma SGS Technology Ltd",
+      "event_type": "capex",
+      "title": "Syrma SGS-Elemaster JV opens high-reliability electronics manufacturi...",
+      "summary": "\"Syrma SGS-Elemaster JV opens high-reliability electronics manufacturing facility in Bengaluru\" \u2014 Published by electronics.economictimes.indiatimes.com on 2026-09-03.",
+      "event_date": "2026-09-03",
+      "source_name": "electronics.economictimes.indiatimes.com",
+      "source_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOUmEzczFIMXh2VG44bWc4aUpxRjN3Y2d3YU5NZ3RLUkwzRkhYZ2VzZzZTSlhZSWhydjVqVHE1ZW1pQmRaeGMtenhXTVVnYkFpaHZZNjBUWGlDNkU4Y0JUZmNTSG1kY3lUYVUtT1VMWW1VOTJteERoWkF6LWNMbWpjTERtSUNPaGJ1Rzc4TUtZUmNJU0twblN1bGZqMDdnMDdEUloxQjQwazhBV01kVkRDRFRQU3ltcWRvTEFZTzV5ZUNDQ3VUQmF0OWt4Q1Fnd052bTBMTGdXaElzVWVzZGFlbzlES1FVQjV4c0hNR2g2TUxEYV9TenFYU0pVQWw4R1lpOWZ6MFFrb9IBjAJBVV95cUxPTkFKNl9QSWdEak1YOWZaMlBmcUNBa01ZWUZ1bkFJeDluRU5qUlhYaHRaSGRqSVNTdFhqQWpSQXFRTnhEUk5tRFRZTzRFR2UxYVhROEw2Y0tqbzFENE9pUDdkR1hWOFVDSHAwd2dTSXRhVTNNNnh3TjVRYW5rd0FoQWFqR1RPUHRicjZ5UTJBX2dZb3htSGgySGlpZVZ0UGRqV0FqeG9LU21hVUZNMmJzSUIxQ3BlcWZDSksxN2tkVUJNMzM4eGR5NjJUcDlyWXVDUjZFbjJDMmc5TGNPOWRaczlBMU5aZGl6NlFVWmZxNnBuSUVYcHJmY0ZwT3pTTHNzU29OTUtrWVZoX0xQ?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: electronics.economictimes.indiatimes.com (Source: https://news.google.com/rss/articles/CBMihwJBVV95cUxOUmEzczFIMXh2VG44bWc4aUpxRjN3Y2d3YU5NZ3RLUkwzRkhYZ2VzZzZTSlhZSWhydjVqVHE1ZW1pQmRaeGMtenhXTVVnYkFpaHZZNjBUWGlDNkU4Y0JUZmNTSG1kY3lUYVUtT1VMWW1VOTJteERoWkF6LWNMbWpjTERtSUNPaGJ1Rzc4TUtZUmNJU0twblN1bGZqMDdnMDdEUloxQjQwazhBV01kVkRDRFRQU3ltcWRvTEFZTzV5ZUNDQ3VUQmF0OWt4Q1Fnd052bTBMTGdXaElzVWVzZGFlbzlES1FVQjV4c0hNR2g2TUxEYV9TenFYU0pVQWw4R1lpOWZ6MFFrb9IBjAJBVV95cUxPTkFKNl9QSWdEak1YOWZaMlBmcUNBa01ZWUZ1bkFJeDluRU5qUlhYaHRaSGRqSVNTdFhqQWpSQXFRTnhEUk5tRFRZTzRFR2UxYVhROEw2Y0tqbzFENE9pUDdkR1hWOFVDSHAwd2dTSXRhVTNNNnh3TjVRYW5rd0FoQWFqR1RPUHRicjZ5UTJBX2dZb3htSGgySGlpZVZ0UGRqV0FqeG9LU21hVUZNMmJzSUIxQ3BlcWZDSksxN2tkVUJNMzM4eGR5NjJUcDlyWXVDUjZFbjJDMmc5TGNPOWRaczlBMU5aZGl6NlFVWmZxNnBuSUVYcHJmY0ZwT3pTTHNzU29OTUtrWVZoX0xQ?oc=5)",
+        "Event Date: 2026-09-03",
+        "Subject Entity: Syrma SGS Technology Ltd",
+        "Primary Citation: Syrma SGS-Elemaster JV opens high-reliability electronics manufacturing facility in Bengaluru",
+        "Operating Cluster: Bengaluru / Mysuru (Bengaluru-Mysuru High-Tech Corridor)"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    },
+    {
+      "event_id": "evt_ext_eb3b3de5",
+      "entity_id": "comp_amber",
+      "entity_name": "Amber Enterprises (Ascent Circuits)",
+      "event_type": "capex",
+      "title": "Amber Enterprises' subsidiary to acquire additional 38.5% stake in As...",
+      "summary": "\"Amber Enterprises' subsidiary to acquire additional 38.5% stake in Ascent Circuits for \u20b9336.75 crore\" \u2014 Published by ET Manufacturing on 2026-06-19.",
+      "event_date": "2026-06-19",
+      "source_name": "ET Manufacturing",
+      "source_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOOXVkYWt2bEZWSzBEQm9tMUFVTThEU29MSUpTbC1ZQVluV2R4QUxndzV4ZzFsNTZsX1F0R04zNDdKXzBuLVlaUndFQTc4Z1k1eEF6c1lENjNROTV4UlMwc3pyeV8xTF93Skt6NGZfcTVqcHVYLUVoR3dSZVlEUG1mR18xd3hLMC1USmRsNjF0d0JJeDJzaWZfdE1vT0F2NWZlWUc2SHM2M1RPXy1WRkNCUHBGUnVISUtTbnNfclR1cTRBVU5tRF9jSGhoeGtkOUtVS0gyU0JRS3FzQnozVWN4WldEZUVKd3hJRHl5cy0ySdIB8wFBVV95cUxPTEZFNlcwNDhPRHpPNkN2aFE2RXpNb1BhandqV2VhWlBwYnhoVGhlZ1VMTTV5aUM1RURBUUkyX3A3VGVQc3FuaFpsV1VDME15SndzR2lSbzA5Mi1lalJqMlRENU05a0ROSTRKNjZEM25yMlZ6TmdWRVJBVkR5dWNTV3J1X05jNUxyX1c0ZzlCU3Q4ZWlKanpZUGFScE9VSzFlRl9yUFR4aE5sLWJpMTN4QVFMTWdRR3pPUEZVY09vWVJUb2ZfSVUxdmFfTGhtYXdGRHRfM2cxLWpqdzBSRmFXNkdpRmdkY1cwRFlQNlYtSkdyMWc?oc=5",
+      "confidence": "High",
+      "facts": [
+        "Event Publisher: ET Manufacturing (Source: https://news.google.com/rss/articles/CBMi7wFBVV95cUxOOXVkYWt2bEZWSzBEQm9tMUFVTThEU29MSUpTbC1ZQVluV2R4QUxndzV4ZzFsNTZsX1F0R04zNDdKXzBuLVlaUndFQTc4Z1k1eEF6c1lENjNROTV4UlMwc3pyeV8xTF93Skt6NGZfcTVqcHVYLUVoR3dSZVlEUG1mR18xd3hLMC1USmRsNjF0d0JJeDJzaWZfdE1vT0F2NWZlWUc2SHM2M1RPXy1WRkNCUHBGUnVISUtTbnNfclR1cTRBVU5tRF9jSGhoeGtkOUtVS0gyU0JRS3FzQnozVWN4WldEZUVKd3hJRHl5cy0ySdIB8wFBVV95cUxPTEZFNlcwNDhPRHpPNkN2aFE2RXpNb1BhandqV2VhWlBwYnhoVGhlZ1VMTTV5aUM1RURBUUkyX3A3VGVQc3FuaFpsV1VDME15SndzR2lSbzA5Mi1lalJqMlRENU05a0ROSTRKNjZEM25yMlZ6TmdWRVJBVkR5dWNTV3J1X05jNUxyX1c0ZzlCU3Q4ZWlKanpZUGFScE9VSzFlRl9yUFR4aE5sLWJpMTN4QVFMTWdRR3pPUEZVY09vWVJUb2ZfSVUxdmFfTGhtYXdGRHRfM2cxLWpqdzBSRmFXNkdpRmdkY1cwRFlQNlYtSkdyMWc?oc=5)",
+        "Event Date: 2026-06-19",
+        "Subject Entity: Amber Enterprises (Ascent Circuits)",
+        "Primary Citation: Amber Enterprises' subsidiary to acquire additional 38.5% stake in Ascent Circuits for \u20b9336.75 crore",
+        "Standardized Value: \u20b9336.75 Cr ($40.09M)"
+      ],
+      "inferences": [
+        "Indicates physical plant capacity addition or machinery procurement; monitor subsequent hiring and testing equipment tenders."
+      ]
+    }
   ]
 }

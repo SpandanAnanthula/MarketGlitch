@@ -353,7 +353,7 @@ export const DataSources: React.FC<DataSourcesProps> = ({ sources }) => {
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 space-y-1">
-              <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Zero-Hallucination Audit (§12)</div>
+              <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Zero-Hallucination Audit (Statutory Guardrail)</div>
               <div className="text-xs font-bold text-emerald-600 flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>0 Ungrounded Citations</span>

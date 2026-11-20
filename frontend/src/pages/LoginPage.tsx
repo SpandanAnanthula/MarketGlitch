@@ -134,7 +134,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
               <div className="flex flex-wrap items-center gap-2 pt-2">
                 <span className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-indigo-50/80 text-indigo-700">
                   <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" />
-                  Zero Hallucinated Citations (§12)
+                  Zero Hallucinated Citations (100% Grounded)
                 </span>
                 <span className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-purple-50/80 text-purple-700">
                   <ShieldCheck className="w-3.5 h-3.5 text-purple-600" />
