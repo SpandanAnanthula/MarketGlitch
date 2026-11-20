@@ -169,41 +169,8 @@ export function App() {
     <ErrorBoundary>
       <div className="h-screen w-screen overflow-hidden bg-[#F6F8FD] flex flex-col text-slate-800 font-sans selection:bg-indigo-500/20 selection:text-indigo-800">
         
-        {/* Top Application Header & Sticky Bars (Locked Top Bar) */}
-        <div className="sticky top-0 z-40 shrink-0 bg-white shadow-2xs">
-          
-          {/* Reviewer Quick-Switch Bar */}
-          <div className="bg-slate-900 text-slate-200 text-xs px-4 py-1.5 flex items-center justify-between border-b border-slate-800">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-semibold text-white">MarketMind India</span>
-              <span className="text-slate-400 hidden sm:inline">• Electronics & Semiconductor Intelligence SaaS</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-slate-400 text-[11px] hidden md:inline">Current: {workspaceNames[currentWorkspaceId]}</span>
-              <button
-                onClick={() => setIsTourOpen(true)}
-                className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-indigo-900/60 hover:bg-indigo-800 text-indigo-200 hover:text-white transition-colors text-[11px] font-semibold border border-indigo-700/60"
-              >
-                <span>💡 Tour Guide</span>
-              </button>
-              <button
-                onClick={handleLogout}
-                className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 hover:bg-slate-700 text-indigo-300 hover:text-white transition-colors text-[11px] font-semibold"
-              >
-                <LogIn className="w-3 h-3" />
-                <span>View Login Page</span>
-              </button>
-            </div>
-          </div>
-
-          {/* Real-time Animated Intelligence Ticker */}
-          <LiveIntelligenceTicker
-            timelineFilter={timelineFilter}
-            onExploreSignal={() => setIsSignalsModalOpen(true)}
-          />
-
-          {/* Top Application Header (Image 12 & 3) */}
+        {/* ONLY THIS BAR IS LOCKED AT THE TOP */}
+        <div className="sticky top-0 z-30 shrink-0 bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-200/70">
           <Header
             currentWorkspaceId={currentWorkspaceId}
             onSelectWorkspace={handleWorkspaceChange}
@@ -216,9 +183,6 @@ export function App() {
             onLogout={handleLogout}
             onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           />
-
-          {/* Public Ingestion Freshness Bar (Statutory Source Governance) */}
-          <SourceFreshnessBar sources={sources} />
         </div>
 
         {/* Main Layout Container (Sidebar locked on left on desktop, drawer on mobile) */}
@@ -273,10 +237,23 @@ export function App() {
             </div>
           )}
 
-          {/* Dynamic Page Viewport */}
+          {/* Dynamic Page Viewport (Scrolls vertically, all content scrolls away) */}
           <main className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-8">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto space-y-4">
               
+              {/* Real-time Animated Intelligence Ticker (Scrolls away with page) */}
+              <div className="rounded-2xl overflow-hidden shadow-xs border border-slate-800/80">
+                <LiveIntelligenceTicker
+                  timelineFilter={timelineFilter}
+                  onExploreSignal={() => setIsSignalsModalOpen(true)}
+                />
+              </div>
+
+              {/* Public Ingestion Freshness Bar (Scrolls away with page) */}
+              <div className="rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 bg-white">
+                <SourceFreshnessBar sources={sources} />
+              </div>
+
               {/* 1. EXECUTIVE DASHBOARD (Image 12, 1, 8) */}
               {(currentTab === 'dashboard' || currentTab === 'overview') && (
                 <ExecutiveDashboard
