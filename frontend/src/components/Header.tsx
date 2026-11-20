@@ -11,7 +11,8 @@ import {
   Calendar,
   Sparkles,
   Clock,
-  LogOut
+  LogOut,
+  Menu
 } from 'lucide-react';
 import { WorkspaceAlert, TimelineFilter } from '../types';
 
@@ -25,6 +26,7 @@ interface HeaderProps {
   onNavigateSettings?: () => void;
   onOpenTour?: () => void;
   onLogout?: () => void;
+  onToggleMobileMenu?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ 
@@ -36,7 +38,8 @@ export const Header: React.FC<HeaderProps> = ({
   userInitials = "UY",
   onNavigateSettings,
   onOpenTour,
-  onLogout
+  onLogout,
+  onToggleMobileMenu
 }) => {
   const [isWorkspaceDropdownOpen, setIsWorkspaceDropdownOpen] = useState(false);
   const [isTimelineDropdownOpen, setIsTimelineDropdownOpen] = useState(false);
@@ -80,10 +83,20 @@ export const Header: React.FC<HeaderProps> = ({
   const activeTimeline = timelineOptions.find(t => t.id === currentTimeline) || timelineOptions[0];
 
   return (
-    <header className="h-16 px-6 bg-white/70 backdrop-blur-md border-b border-slate-200/70 flex items-center justify-between gap-4 z-20">
-      {/* Search Input (Replicating Image 12 & Image 3) */}
-      <div className="flex-1 max-w-sm">
-        <div className="relative">
+    <header className="h-16 px-4 sm:px-6 bg-white/70 backdrop-blur-md border-b border-slate-200/70 flex items-center justify-between gap-3 sm:gap-4 z-20">
+      {/* Mobile Hamburger + Search Input */}
+      <div className="flex items-center gap-2 flex-1 max-w-sm">
+        {onToggleMobileMenu && (
+          <button
+            onClick={onToggleMobileMenu}
+            className="md:hidden p-2 -ml-1 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors shrink-0"
+            title="Toggle navigation menu"
+            aria-label="Toggle navigation menu"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
+        )}
+        <div className="relative w-full">
           <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
             <Search className="w-4 h-4" />
           </div>
@@ -91,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search competitors, tenders, HS codes, patents..."
+            placeholder="Search competitors, tenders, HS codes..."
             className="w-full pl-9 pr-4 py-2 bg-slate-100/70 hover:bg-slate-100 focus:bg-white border border-transparent focus:border-indigo-300 rounded-full text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/10 transition-all"
           />
         </div>

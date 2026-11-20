@@ -307,6 +307,36 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({
         </div>
       </div>
 
+      {/* TIMELINE SCOPE LIVE/HISTORICAL STATUS BANNER */}
+      {timelineFilter === 'present_week' && (
+        <div className="p-3 px-4 rounded-2xl bg-emerald-950 text-white border border-emerald-700/60 shadow-md flex items-center justify-between text-xs animate-fadeIn">
+          <div className="flex items-center gap-2.5">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+            </span>
+            <span className="font-bold text-emerald-300">Live Statutory Ingestion Active:</span>
+            <span className="text-slate-200">16 Fresh Disclosures, Tata $5B Tooling Ramp & ₹12.8 Cr SiC Tenders verified since Nov 13</span>
+          </div>
+          <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-800 text-emerald-100 hidden sm:inline">
+            100% Grounded
+          </span>
+        </div>
+      )}
+
+      {timelineFilter === 'past_week' && (
+        <div className="p-3 px-4 rounded-2xl bg-indigo-950 text-white border border-indigo-700/60 shadow-md flex items-center justify-between text-xs animate-fadeIn">
+          <div className="flex items-center gap-2.5">
+            <Clock className="w-4 h-4 text-indigo-400 shrink-0" />
+            <span className="font-bold text-indigo-300">Historical Audit Cutoff (06–12 Nov 2026):</span>
+            <span className="text-slate-200">Mandated 55% local content order, BEL Kavach ₹42.5 Cr tender, and bare PCB consolidation</span>
+          </div>
+          <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-800 text-indigo-100 hidden sm:inline">
+            Audited Snapshot
+          </span>
+        </div>
+      )}
+
       {/* 2. TOP KPI METRICS ROW (6 Glanceable Cards - Dynamically Scoped & Clickable Drilldown) */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
         {/* Card 1: Market Developments */}

@@ -34,7 +34,7 @@ import {
   WorkspaceAlert,
   TimelineFilter
 } from './types';
-import { LogIn, LayoutDashboard } from 'lucide-react';
+import { LogIn, LayoutDashboard, X } from 'lucide-react';
 
 export function App() {
   // Session & Tenant State
@@ -49,6 +49,7 @@ export function App() {
   const [isWhatIfOpen, setIsWhatIfOpen] = useState<boolean>(false);
   const [isTourOpen, setIsTourOpen] = useState<boolean>(false);
   const [isSignalsModalOpen, setIsSignalsModalOpen] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   // Intelligence State
   const [currentProfile, setCurrentProfile] = useState<CompanyProfile | null>(TENANT_WORKSPACES['ws_electronics_default'].profile);
@@ -213,27 +214,67 @@ export function App() {
             onNavigateSettings={() => setCurrentTab('settings')}
             onOpenTour={() => setIsTourOpen(true)}
             onLogout={handleLogout}
+            onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           />
 
           {/* Public Ingestion Freshness Bar (Statutory Source Governance) */}
           <SourceFreshnessBar sources={sources} />
         </div>
 
-        {/* Main Layout Container (Sidebar locked on left, main area scrollable) */}
-        <div className="flex-1 flex overflow-hidden min-h-0">
+        {/* Main Layout Container (Sidebar locked on left on desktop, drawer on mobile) */}
+        <div className="flex-1 flex overflow-hidden min-h-0 relative">
           
-          {/* Navigation Sidebar (Locked Pinned Left) */}
-          <Sidebar
-            currentTab={currentTab}
-            onSelectTab={setCurrentTab}
-            workspaceName={workspaceNames[currentWorkspaceId]}
-            userName={userEmail.split('@')[0]}
-            userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
-            onLogout={handleLogout}
-          />
+          {/* Desktop Navigation Sidebar (Locked Pinned Left) */}
+          <div className="hidden md:flex shrink-0">
+            <Sidebar
+              currentTab={currentTab}
+              onSelectTab={setCurrentTab}
+              workspaceName={workspaceNames[currentWorkspaceId]}
+              userName={userEmail.split('@')[0]}
+              userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
+              onLogout={handleLogout}
+            />
+          </div>
+
+          {/* Mobile Sliding Navigation Drawer */}
+          {isMobileMenuOpen && (
+            <div className="fixed inset-0 z-50 md:hidden flex">
+              <div 
+                className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity animate-fadeIn"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              <div className="relative w-72 max-w-[80vw] bg-white h-full z-10 shadow-2xl flex flex-col animate-slideRight">
+                <div className="p-3 px-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Navigation Menu</span>
+                  <button 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+                <div className="flex-1 overflow-y-auto">
+                  <Sidebar
+                    currentTab={currentTab}
+                    onSelectTab={(tab) => {
+                      setCurrentTab(tab);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    workspaceName={workspaceNames[currentWorkspaceId]}
+                    userName={userEmail.split('@')[0]}
+                    userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
+                    onLogout={() => {
+                      setIsMobileMenuOpen(false);
+                      handleLogout();
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Dynamic Page Viewport */}
-          <main className="flex-1 overflow-y-auto p-6 md:p-8">
+          <main className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-8">
             <div className="max-w-7xl mx-auto">
               
               {/* 1. EXECUTIVE DASHBOARD (Image 12, 1, 8) */}

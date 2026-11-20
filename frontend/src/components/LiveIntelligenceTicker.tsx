@@ -12,9 +12,13 @@ export const LiveIntelligenceTicker: React.FC<LiveIntelligenceTickerProps> = ({
 }) => {
   const alerts = [
     { source: 'BSE / NSE', title: 'Tata Electronics accelerates $5B–$6B equipment orders for Dholera wafer fab cleanrooms', time: '2h ago', badge: 'Capex Ramp', color: 'text-indigo-400' },
-    { source: 'GeM Portal', title: 'BEL Kavach Train Collision Avoidance ₹42.5 Cr SMT tender active (GEM/2026/B/8912401)', time: '4h ago', badge: 'Active Tender', color: 'text-emerald-400' },
-    { source: 'Joint Venture', title: 'Kaynes Technology & Vishay finalize OSAT cleanroom for automotive SiC power modules', time: '5h ago', badge: 'M&A / JV', color: 'text-purple-400' },
+    { source: 'GeM Portal', title: 'BEL Kavach Train Collision Avoidance ₹42.5 Cr SMT tender active (GEM/2026/B/8912401)', time: '3h ago', badge: 'Active Tender', color: 'text-emerald-400' },
+    { source: 'Joint Venture', title: 'Kaynes Technology & Vishay finalize OSAT cleanroom for automotive SiC power modules', time: '4h ago', badge: 'M&A / JV', color: 'text-purple-400' },
+    { source: 'BSE India', title: 'Dixon Technologies lines up ₹1,000 Cr high-speed automated SMT line capex across Noida', time: '5h ago', badge: 'SMT Capex', color: 'text-sky-400' },
+    { source: 'NSE India', title: 'Syrma SGS invests ₹14.99 Cr into high-reliability defense PCB assembly subsidiary', time: '7h ago', badge: 'Defense EMS', color: 'text-teal-400' },
+    { source: 'GeM Portal', title: 'CESL ₹12.8 Cr Silicon Carbide (SiC) Power Module Test Bench Tender Published (GEM/2026/B/8771902)', time: '1d ago', badge: 'EV Procurement', color: 'text-amber-400' },
     { source: 'DPIIT / MoC', title: 'Revised Public Procurement mandate enforces 55% local content for railway & defense SMT', time: '1d ago', badge: 'Statutory Mandate', color: 'text-amber-400' },
+    { source: 'CPPP Defense', title: 'DRDO DEAL ₹8.5 Cr X-Band GaN Power Amplifier micro-packaging contract active', time: '2d ago', badge: 'Defense RFQ', color: 'text-rose-400' },
     { source: 'DGCIS Trade', title: 'Semiconductor imports under HS 8542 reached $1,465M in November (+18.6% YoY run-rate)', time: '2d ago', badge: 'Trade Flow', color: 'text-sky-400' }
   ];
 

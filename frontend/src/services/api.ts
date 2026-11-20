@@ -13,7 +13,7 @@ import {
 import { LIVE_MARKET_DATA } from '../data/liveMarketData';
 import { TENANT_WORKSPACES } from '../data/tenantWorkspaces';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE || '/api';
 
 // Safe fetch wrapper with automatic fallback handling
 async function safeFetch<T>(endpoint: string, fallbackData: T): Promise<T> {

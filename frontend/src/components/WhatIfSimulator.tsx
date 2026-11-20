@@ -30,56 +30,158 @@ export const WhatIfSimulator: React.FC<WhatIfSimulatorProps> = ({
 }) => {
   const tenantCfg = TENANT_WORKSPACES[workspaceId] || TENANT_WORKSPACES['ws_electronics_default'];
   const companyName = tenantCfg.profile?.company_name || tenantCfg.name;
+  const annualRevenue = tenantCfg.profile?.annual_revenue || '₹1,250 Cr';
+  const marketShare = tenantCfg.profile?.market_share || '18.5%';
   const [selectedScenario, setSelectedScenario] = useState<number>(0);
   const [isSimulating, setIsSimulating] = useState(false);
   const [appliedNotice, setAppliedNotice] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
-  const scenarios = [
-    {
-      id: 'dixon_syrma_merger',
-      title: 'Consolidation Shock: Dixon Acquires Syrma SGS',
-      tag: 'M&A Squeeze',
-      tagColor: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
-      description: 'Simulates a mega-merger between Dixon (22.4%) and Syrma (17.8%), creating a 40.2% dominant contract assembler.',
-      metrics: [
-        { label: 'Competitor SMT Capacity', before: '14,000 cph', after: '28,500 cph', delta: '+103%', isPositive: false },
-        { label: `${companyName} Price Pressure`, before: 'Baseline', after: '-8.5%', delta: 'High Margin Risk', isPositive: false },
-        { label: 'Addressable Kavach Subcontract', before: 'Open Bids', after: 'Syrma Captive', delta: 'Requires Class 3 Pivot', isPositive: false }
-      ],
-      aiRecommendation: `**AI Strategic Response:**\n1. Immediately pivot lines away from commoditized consumer SMT toward automotive Grade AEC-Q100 ECU boards where Dixon-Syrma integration creates 6-month operational disruption.\n2. Lock in long-term raw PCB substrate supply with independent fabs like Shakti or Shogini to avoid captive capacity lockouts.\n3. Bid aggressively on the BEL Kavach sub-assembly before combined production lines achieve unified testing clearance.`,
-      confidence: '94.2% Empirical Match'
-    },
-    {
-      id: 'tariff_hike',
-      title: 'Trade Policy Shift: DGTR Imposes 15% Duty on HS 8542 Imports',
-      tag: 'Import Substitution',
-      tagColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-      description: 'Simulates Commerce Ministry tariff hike on foreign ICs and multilayer boards to enforce 55% local content mandate.',
-      metrics: [
-        { label: 'Domestic Market Demand', before: '₹18,500 Cr', after: '₹24,800 Cr', delta: '+34.0%', isPositive: true },
-        { label: 'Gross Margin Expansion', before: '14.2%', after: '19.8%', delta: '+5.6% Margin', isPositive: true },
-        { label: 'Component Sourcing Lead Time', before: '3.5 Weeks', after: '6.0 Weeks', delta: 'Supply Squeeze', isPositive: false }
-      ],
-      aiRecommendation: `**AI Strategic Response:**\n1. Capitalize on Class-1 Make in India supplier preference in GeM public tenders (100% price match right against imported alternatives).\n2. Expand domestic supplier qualification with local OSAT packaging vendors (Kaynes-Vishay) to bypass custom clearance delays.\n3. Pre-book nitrogen and copper laminate inventory to hedge against immediate spot price surges.`,
-      confidence: '97.1% Empirical Match'
-    },
-    {
-      id: 'specs_subsidy_surge',
-      title: 'Capital Incentive: Cabinet Expands SPECS 2.0 to 40% Capex Reimbursement',
-      tag: 'Capital Grant',
-      tagColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
-      description: 'Simulates MeitY announcement raising capital subsidies on automated optical inspection (AOI) and surface-mount machines.',
-      metrics: [
-        { label: 'Pick & Place Line Payback Period', before: '4.2 Years', after: '2.3 Years', delta: '-45% Payback', isPositive: true },
-        { label: 'Capex Effective Net Cost', before: '₹12.0 Cr', after: '₹7.2 Cr', delta: '-₹4.8 Cr Subsidy', isPositive: true },
-        { label: 'Annual SMT Line Output', before: '1.2M Units', after: '2.4M Units', delta: '+100% Scale', isPositive: true }
-      ],
-      aiRecommendation: `**AI Strategic Response:**\n1. File common facility center (CFC) consortium grant under MeitY EMC 2.0 scheme in Sanand or Sriperumbudur.\n2. Upgrade inspection cleanroom to ISO Class 7 to qualify for aerospace and defense radar subcontracting.\n3. Accelerate equipment procurement before statutory subsidy disbursement quota is exhausted.`,
-      confidence: '98.5% Empirical Match'
+  // Workspace-customized dynamic simulation scenarios
+  const getScenariosForWorkspace = () => {
+    if (workspaceId === 'ws_auto_inverters') {
+      return [
+        {
+          id: 'kaynes_vishay_sic_surge',
+          title: 'Automotive OSAT Squeeze: Kaynes-Vishay Sanand Ramp',
+          tag: 'Supply Squeeze',
+          tagColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+          description: `Simulates Kaynes & Vishay scaling direct-bonded copper (DBC) packaging to 60M SiC modules in Sanand, targeting EV inverter contracts.`,
+          metrics: [
+            { label: '800V SiC Module Cost', before: '₹14,500/unit', after: '₹11,200/unit', delta: '-22.8% Unit Cost', isPositive: false },
+            { label: `${companyName} CESL Win Chance`, before: '32%', after: '68%', delta: 'Class-1 Local Advantage', isPositive: true },
+            { label: 'ARAI AIS-004 Thermal Testing', before: '1,000 cycles', after: '3,000 cycles', delta: 'Requires Qualification', isPositive: false }
+          ],
+          aiRecommendation: `**AI Strategic Response for ${companyName}:**\n1. Secure European Tier-1 commercial vehicle qualification for heavy e-bus inverters before Q2 2027.\n2. Partner with local packaging labs (IISc/C-MET) for graphene thermal interface materials to outperform silicon-based competitors.\n3. Bid aggressively on the CESL ₹12.8 Cr test bench tender (GEM/2026/B/8771902) using captive bench testing capacity.`,
+          confidence: '95.8% Empirical Match'
+        },
+        {
+          id: 'ev_tariff_surge',
+          title: 'Customs Protection: 20% Tariff on Foreign Inverter Sub-Assemblies',
+          tag: 'Policy Shield',
+          tagColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+          description: `Simulates DGTR recommendation imposing 20% customs duty on imported traction inverter power stages to enforce 50% domestic content.`,
+          metrics: [
+            { label: `${companyName} Gross Margin`, before: '16.2%', after: '22.5%', delta: '+6.3% Margin Surge', isPositive: true },
+            { label: 'Gate Driver IC Lead Time', before: '4.0 Weeks', after: '7.5 Weeks', delta: 'Import Squeeze', isPositive: false },
+            { label: 'Domestic EV Fleet Addressable Market', before: '₹3,200 Cr', after: '₹4,850 Cr', delta: '+51.5% Expansion', isPositive: true }
+          ],
+          aiRecommendation: `**AI Strategic Response:**\n1. Qualify secondary domestic packaging vendors to hedge gate driver lead times.\n2. Leverage 100% price-matching rights under Make in India Class-1 status against Chinese imports.\n3. Pre-book active silicon carbide wafer inventory from European foundries under annual contract.`,
+          confidence: '97.4% Empirical Match'
+        },
+        {
+          id: 'specs_grant_ev',
+          title: 'Capital Grant: SPECS 2.0 Inverter Production Subsidy (40% Capex)',
+          tag: 'Capital Incentive',
+          tagColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
+          description: `Simulates MeitY capital reimbursement expansion for cleanroom testing of high-voltage automotive power modules.`,
+          metrics: [
+            { label: 'Automotive Cleanroom Net Cost', before: '₹18.0 Cr', after: '₹10.8 Cr', delta: '-₹7.2 Cr Grant', isPositive: true },
+            { label: 'Annual Power Module Run Rate', before: '45,000 units', after: '120,000 units', delta: '+166% Scale', isPositive: true },
+            { label: 'Investment Payback Window', before: '4.8 Years', after: '2.4 Years', delta: '-50% Faster Payback', isPositive: true }
+          ],
+          aiRecommendation: `**AI Strategic Response:**\n1. File common facility center (CFC) grant under MeitY EMC 2.0 in Bengaluru-Mysuru corridor.\n2. Upgrade burn-in screening bays to handle 1,200V commercial truck drives.\n3. Expand OEM supply agreement before national subsidy disbursement quota closes.`,
+          confidence: '98.1% Empirical Match'
+        }
+      ];
     }
-  ];
+
+    if (workspaceId === 'ws_bare_pcb_tech') {
+      return [
+        {
+          id: 'amber_monopoly_squeeze',
+          title: 'Substrate Monopoly: Amber 98.5% Ascent Circuits Squeeze',
+          tag: 'Captive M&A',
+          tagColor: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
+          description: `Simulates Amber monopolizing domestic 8-to-12 layer rigid-flex PCB production for captive HVAC & EMS assemblies.`,
+          metrics: [
+            { label: `${companyName} Open Market Inflow`, before: 'Baseline', after: '+42.5%', delta: 'Surge in Independent Orders', isPositive: true },
+            { label: 'Copper Clad Laminate Spot Price', before: '₹1,850/sq.m', after: '₹2,380/sq.m', delta: '+28.6% Input Cost', isPositive: false },
+            { label: 'BEL Kavach Bare Substrate Win Chance', before: '45%', after: '82%', delta: 'Tier-1 Preference', isPositive: true }
+          ],
+          aiRecommendation: `**AI Strategic Response for ${companyName}:**\n1. Position Shakti Multilayer Circuits as the premier conflict-free independent PCB fabricator for Bharat EMS and Syrma SGS.\n2. Sign long-term supply agreement with copper foil suppliers to freeze laminate input costs.\n3. Obtain Class 3 IPC certification for Kavach collision avoidance train safety boards.`,
+          confidence: '96.2% Empirical Match'
+        },
+        {
+          id: 'pcb_import_anti_dumping',
+          title: 'Trade Defense: DGTR Anti-Dumping Duty on Chinese Multilayer PCBs',
+          tag: 'Import Substitution',
+          tagColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+          description: `Simulates DGTR preliminary findings imposing $1.20/kg anti-dumping duty on bare printed circuit boards (HS 8534).`,
+          metrics: [
+            { label: 'Domestic Fab Capacity Utilization', before: '64.0%', after: '94.5%', delta: '+30.5% Utilization', isPositive: true },
+            { label: `${companyName} Gross Realization`, before: '₹4,200/panel', after: '₹5,450/panel', delta: '+29.7% Price Jump', isPositive: true },
+            { label: 'Order Backlog Duration', before: '2.5 Weeks', after: '6.0 Weeks', delta: 'Capacity Strain', isPositive: false }
+          ],
+          aiRecommendation: `**AI Strategic Response:**\n1. Prioritize high-margin 8-layer military and aerospace boards over low-layer single-sided boards.\n2. Commission automated laser direct imaging (LDI) machines under SPECS capital subsidy.\n3. Lock in guaranteed allocation slots for defense PSUs (BEL, HAL) at 20% margin premium.`,
+          confidence: '97.9% Empirical Match'
+        },
+        {
+          id: 'specs_bare_pcb',
+          title: 'Industrial Policy: SPECS 2.0 40% Subsidy for High-Layer PCB Fabrication',
+          tag: 'Incentive Surge',
+          tagColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
+          description: `Simulates MeitY targeted capital grant for domestic bare board fabricators investing in automated optical inspection.`,
+          metrics: [
+            { label: 'LDI & AOI Line Capex', before: '₹14.0 Cr', after: '₹8.4 Cr', delta: '-₹5.6 Cr Subsidy', isPositive: true },
+            { label: 'Fine-Pitch Microvia Capability', before: '100 micron', after: '40 micron', delta: 'HDI Upgrade', isPositive: true },
+            { label: 'Payback Timeline', before: '4.5 Years', after: '2.2 Years', delta: '-51% Faster Return', isPositive: true }
+          ],
+          aiRecommendation: `**AI Strategic Response:**\n1. Rapidly submit investment proposal for automated high-density interconnect (HDI) line.\n2. Qualify fine-pitch boards for automotive ADAS modules.\n3. Secure long-term captive offtake contracts with domestic EMS leaders.`,
+          confidence: '98.3% Empirical Match'
+        }
+      ];
+    }
+
+    // Default: ws_electronics_default (Bharat EMS)
+    return [
+      {
+        id: 'dixon_syrma_merger',
+        title: 'Consolidation Shock: Dixon Acquires Syrma SGS',
+        tag: 'M&A Squeeze',
+        tagColor: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
+        description: 'Simulates a mega-merger between Dixon (22.4%) and Syrma (17.8%), creating a 40.2% dominant contract assembler.',
+        metrics: [
+          { label: 'Competitor SMT Capacity', before: '14,000 cph', after: '28,500 cph', delta: '+103%', isPositive: false },
+          { label: `${companyName} Price Pressure`, before: 'Baseline', after: '-8.5%', delta: 'High Margin Risk', isPositive: false },
+          { label: 'Addressable Kavach Subcontract', before: 'Open Bids', after: 'Syrma Captive', delta: 'Requires Class 3 Pivot', isPositive: false }
+        ],
+        aiRecommendation: `**AI Strategic Response for ${companyName}:**\n1. Immediately pivot lines away from commoditized consumer SMT toward automotive Grade AEC-Q100 ECU boards where Dixon-Syrma integration creates 6-month operational disruption.\n2. Lock in long-term raw PCB substrate supply with independent fabs like Shakti to avoid captive capacity lockouts.\n3. Bid aggressively on the BEL Kavach sub-assembly before combined production lines achieve unified testing clearance.`,
+        confidence: '94.2% Empirical Match'
+      },
+      {
+        id: 'tariff_hike',
+        title: 'Trade Policy Shift: DGTR Imposes 15% Duty on HS 8542 Imports',
+        tag: 'Import Substitution',
+        tagColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+        description: 'Simulates Commerce Ministry tariff hike on foreign ICs and multilayer boards to enforce 55% local content mandate.',
+        metrics: [
+          { label: 'Domestic Market Demand', before: '₹18,500 Cr', after: '₹24,800 Cr', delta: '+34.0%', isPositive: true },
+          { label: 'Gross Margin Expansion', before: '14.2%', after: '19.8%', delta: '+5.6% Margin', isPositive: true },
+          { label: 'Component Sourcing Lead Time', before: '3.5 Weeks', after: '6.0 Weeks', delta: 'Supply Squeeze', isPositive: false }
+        ],
+        aiRecommendation: `**AI Strategic Response:**\n1. Capitalize on Class-1 Make in India supplier preference in GeM public tenders (100% price match right against imported alternatives).\n2. Expand domestic supplier qualification with local OSAT packaging vendors (Kaynes-Vishay) to bypass custom clearance delays.\n3. Pre-book nitrogen and copper laminate inventory to hedge against immediate spot price surges.`,
+        confidence: '97.1% Empirical Match'
+      },
+      {
+        id: 'specs_subsidy_surge',
+        title: 'Capital Incentive: Cabinet Expands SPECS 2.0 to 40% Capex Reimbursement',
+        tag: 'Capital Grant',
+        tagColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
+        description: 'Simulates MeitY announcement raising capital subsidies on automated optical inspection (AOI) and surface-mount machines.',
+        metrics: [
+          { label: 'Pick & Place Line Payback Period', before: '4.2 Years', after: '2.3 Years', delta: '-45% Payback', isPositive: true },
+          { label: 'Capex Effective Net Cost', before: '₹12.0 Cr', after: '₹7.2 Cr', delta: '-₹4.8 Cr Subsidy', isPositive: true },
+          { label: 'Annual SMT Line Output', before: '1.2M Units', after: '2.4M Units', delta: '+100% Scale', isPositive: true }
+        ],
+        aiRecommendation: `**AI Strategic Response:**\n1. File common facility center (CFC) consortium grant under MeitY EMC 2.0 scheme in Sanand or Sriperumbudur.\n2. Upgrade inspection cleanroom to ISO Class 7 to qualify for aerospace and defense radar subcontracting.\n3. Accelerate equipment procurement before statutory subsidy disbursement quota is exhausted.`,
+        confidence: '98.5% Empirical Match'
+      }
+    ];
+  };
+
+  const scenarios = getScenariosForWorkspace();
 
   const current = scenarios[selectedScenario];
 

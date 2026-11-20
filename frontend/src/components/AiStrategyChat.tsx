@@ -43,7 +43,7 @@ export const AiStrategyChat: React.FC<AiStrategyChatProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
-  const [apiKey, setApiKey] = useState(() => localStorage.getItem('GEMINI_API_KEY') || '');
+  const [apiKey, setApiKey] = useState(() => localStorage.getItem('GEMINI_API_KEY') || (import.meta as any).env?.VITE_GEMINI_API_KEY || '');
   const [isKeyModalOpen, setIsKeyModalOpen] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -324,8 +324,12 @@ User query: ${textToSend}`
                     Zero-Hallucination
                   </span>
                 </div>
-                <p className="text-[11px] text-slate-400 truncate max-w-[240px]">
-                  Context: <span className="text-indigo-300 font-semibold">{companyName}</span>
+                <p className="text-[11px] text-slate-400 truncate max-w-[240px] flex items-center gap-1.5">
+                  <span>Context: <strong className="text-indigo-300 font-semibold">{companyName}</strong></span>
+                  <span className="text-slate-500">•</span>
+                  <span className={apiKey.trim() ? "text-emerald-400 font-bold" : "text-slate-400"}>
+                    {apiKey.trim() ? 'Gemini 1.5' : 'Grounded AI'}
+                  </span>
                 </p>
               </div>
             </div>
