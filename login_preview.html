@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketMind India — Executive Market Intelligence UI Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #F6F8FD;
+      color: #1E293B;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.06), 0 4px 12px -2px rgba(0, 0, 0, 0.02);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(241, 245, 249, 0.8);
+      box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+    }
+    .glass-modal {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 25px 60px -15px rgba(30, 27, 75, 0.25);
+    }
+    .mesh-gradient-1 {
+      position: absolute;
+      top: -10%;
+      left: -5%;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(199, 210, 254, 0.45) 0%, rgba(238, 242, 255, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .mesh-gradient-2 {
+      position: absolute;
+      bottom: -10%;
+      right: -5%;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(221, 214, 254, 0.4) 0%, rgba(245, 243, 255, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .pill-active {
+      background: #0F172A;
+      color: #FFFFFF;
+    }
+    .pill-inactive {
+      background: rgba(241, 245, 249, 0.9);
+      color: #475569;
+    }
+    .pill-inactive:hover {
+      background: #E2E8F0;
+      color: #0F172A;
+    }
+    .pulse-dot {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulseGreen 2s infinite;
+    }
+    @keyframes pulseGreen {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    /* Hide scrollbars for clean look */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen overflow-x-hidden">
+  
+  <div class="mesh-gradient-1"></div>
+  <div class="mesh-gradient-2"></div>
+
+  <!-- TOP VIEW SWITCHER BAR (Allows 1-click toggling between Home Page, Login Page & Detail Modal) -->
+  <header class="sticky top-0 z-50 bg-[#0F172A] text-white px-6 py-2.5 flex flex-wrap items-center justify-between gap-4 shadow-md border-b border-slate-800">
+    <div class="flex items-center gap-3">
+      <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-xs text-white">
+        MM
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="font-extrabold text-sm tracking-tight">MarketMind India</span>
+        <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-indigo-300 font-semibold border border-slate-700">Electronics & Semiconductor SaaS</span>
+      </div>
+    </div>
+
+    <!-- Active View Selector Pills -->
+    <div class="flex items-center gap-1.5 p-1 bg-slate-800/90 rounded-full border border-slate-700/80 text-xs font-semibold">
+      <button id="btn-view-home" onclick="switchView('home')" class="px-4 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm flex items-center gap-1.5 transition-all">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <span>1. Home Page (Dashboard)</span>
+      </button>
+      <button id="btn-view-login" onclick="switchView('login')" class="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-700/60 flex items-center gap-1.5 transition-all">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+        <span>2. Login Page (Image 13)</span>
+      </button>
+      <button id="btn-view-modal" onclick="openSignalModal()" class="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-700/60 flex items-center gap-1.5 transition-all">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        <span>3. Table 4 Signal Modal (Anti-Bomb UX)</span>
+      </button>
+    </div>
+
+    <div class="text-[11px] text-slate-400 font-medium hidden md:block">
+      All 10 Intelligence Stages Verified • Zero Hallucinations (§12)
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- VIEW 1: HOME PAGE / EXECUTIVE DASHBOARD (Replicating Image 12, 1, 8)       -->
+  <!-- ========================================================================= -->
+  <div id="view-home" class="hidden relative z-10">
+    
+    <!-- APP HEADER -->
+    <div class="h-16 px-6 bg-white/70 backdrop-blur-md border-b border-slate-200/70 flex items-center justify-between gap-4">
+      <!-- Search Input (Image 12 & 3) -->
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <input type="text" placeholder="Search competitors, tenders, HS codes, patents..." class="w-full pl-9 pr-4 py-2 bg-slate-100/70 hover:bg-slate-100 focus:bg-white border border-transparent focus:border-indigo-300 rounded-full text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/10 transition-all">
+        </div>
+      </div>
+
+      <!-- Right Controls: Workspace Selector + Notifications + Settings + Avatar -->
+      <div class="flex items-center gap-3">
+        <!-- Workspace Dropdown -->
+        <div class="relative">
+          <button id="ws-btn" onclick="toggleDropdown('ws-menu')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/70 text-xs font-semibold text-slate-800 transition-all">
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+            <span id="current-ws-label">Bharat EMS Solutions Pvt Ltd</span>
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          
+          <div id="ws-menu" class="hidden absolute right-0 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50">
+            <div class="px-3 py-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">
+              Switch Tenant Workspace (§10 Scoped)
+            </div>
+            <button onclick="changeWorkspace('Bharat EMS Solutions Pvt Ltd', 'Integrated EMS & SMT')" class="w-full px-3 py-2 text-left text-xs hover:bg-indigo-50/70 text-slate-800 flex items-center justify-between font-semibold">
+              <div>
+                <div class="text-slate-900">Bharat EMS Solutions Pvt Ltd</div>
+                <div class="text-[10px] text-slate-400">Integrated EMS & SMT • Enterprise</div>
+              </div>
+              <span class="text-indigo-600 font-bold">✓</span>
+            </button>
+            <button onclick="changeWorkspace('NexGen EV Inverters Ltd', 'Automotive Power Electronics')" class="w-full px-3 py-2 text-left text-xs hover:bg-indigo-50/70 text-slate-800 flex items-center justify-between">
+              <div>
+                <div class="text-slate-900">NexGen EV Inverters Ltd</div>
+                <div class="text-[10px] text-slate-400">Automotive Power Electronics • Professional</div>
+              </div>
+            </button>
+            <button onclick="changeWorkspace('Shakti Multilayer Circuits', 'Bare PCB Fabrication')" class="w-full px-3 py-2 text-left text-xs hover:bg-indigo-50/70 text-slate-800 flex items-center justify-between">
+              <div>
+                <div class="text-slate-900">Shakti Multilayer Circuits</div>
+                <div class="text-[10px] text-slate-400">Bare Multilayer PCB Fabrication • Growth</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Alert Bell -->
+        <button class="relative p-2 rounded-full hover:bg-slate-100 text-slate-600 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500"></span>
+        </button>
+
+        <!-- Settings Icon -->
+        <button class="p-2 rounded-full hover:bg-slate-100 text-slate-600 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </button>
+
+        <!-- User Initials Avatar (Image 12 & 3: UY) -->
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 text-white font-bold text-xs flex items-center justify-center shadow-sm">
+          UY
+        </div>
+      </div>
+    </div>
+
+    <!-- SOURCE FRESHNESS BAR (§18) -->
+    <div class="bg-indigo-50/70 border-b border-indigo-100/60 px-6 py-2 flex items-center justify-between text-xs text-indigo-900">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+        <span class="font-bold text-indigo-950">9 Public Ingestion Feeds Active</span>
+        <span class="text-indigo-600/70">• DGCIS Trade, GeM Procurement, BSE/NSE Corporate, IP India Patents, MeitY Circulars</span>
+      </div>
+      <div class="flex items-center gap-3 text-[11px] font-semibold text-indigo-700">
+        <span>Zero Hallucinated Citations (§12 Enforced)</span>
+        <span class="px-2 py-0.5 rounded-full bg-white text-indigo-800 border border-indigo-200">100% Grounded</span>
+      </div>
+    </div>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <div class="flex">
+      
+      <!-- SIDEBAR (Replicating Image 12 & 3) -->
+      <aside class="w-64 bg-[#F8F9FE]/95 backdrop-blur-xl border-r border-slate-200/80 p-5 shrink-0 min-h-[calc(100vh-104px)] flex flex-col justify-between">
+        <div class="space-y-6">
+          <!-- Brand Logo -->
+          <div class="flex items-center gap-3 px-2 py-1">
+            <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-500 flex items-center justify-center shadow-md shadow-indigo-500/20">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-base font-extrabold text-slate-900 tracking-tight">MarketMind</span>
+              <span class="text-[10px] font-semibold text-indigo-600 uppercase tracking-wider">India Intelligence</span>
+            </div>
+          </div>
+
+          <!-- Nav Items -->
+          <div class="space-y-5">
+            <div class="space-y-1">
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold bg-indigo-50/90 text-indigo-700 shadow-sm">
+                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                <span>Executive Dashboard</span>
+              </button>
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <span>My Company</span>
+              </button>
+            </div>
+
+            <!-- INTELLIGENCE SECTION -->
+            <div class="space-y-1">
+              <div class="px-3 text-[10px] font-bold tracking-wider text-slate-400 uppercase">INTELLIGENCE</div>
+              <button class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                  <span>Competitors</span>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">5 Active</span>
+              </button>
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <span>Industry Intelligence</span>
+              </button>
+              <button onclick="openSignalModal()" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                  <span>Strategic Signals</span>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">5 Signals</span>
+              </button>
+              <button class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                  <span>Opportunities</span>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">₹99.9 Cr</span>
+              </button>
+            </div>
+
+            <!-- WORKSPACE SECTION -->
+            <div class="space-y-1">
+              <div class="px-3 text-[10px] font-bold tracking-wider text-slate-400 uppercase">WORKSPACE</div>
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <span>Reports & Analytics</span>
+              </button>
+              <button class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                  <span>Data Sources</span>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">9 Active</span>
+              </button>
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                <span>My Data</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- User profile pill at bottom of sidebar -->
+        <div class="pt-4 border-t border-slate-200/60 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center shrink-0">
+            UY
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="text-xs font-bold text-slate-900 truncate">Uttam Yamagowni</span>
+            <span class="text-[10px] text-slate-400 truncate">Bharat EMS Solutions</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN PAGE VIEWPORT -->
+      <main class="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
+        
+        <!-- 1. HERO BANNER (Replicating Image 1 & Image 8) -->
+        <div class="relative overflow-hidden p-6 sm:p-8 rounded-[28px] bg-gradient-to-r from-white/95 via-indigo-50/40 to-purple-50/50 border border-white/80 shadow-[0_8px_30px_rgb(99,102,241,0.05)] backdrop-blur-md">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative z-10">
+            <div class="space-y-2 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-xl bg-indigo-600/10 text-indigo-600 flex items-center justify-center font-bold">
+                  ⚡
+                </span>
+                <span class="text-xs font-bold text-indigo-700 tracking-wider uppercase">
+                  Executive Market Intelligence
+                </span>
+              </div>
+              <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Stay Ahead of the Curve
+              </h1>
+              <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                Smarter insights. Stronger strategy. Tracking 5 Indian electronics competitors, ₹99.9 Cr tenders, and Dholera fab capex in real time.
+              </p>
+            </div>
+
+            <button onclick="openSignalModal()" class="px-6 py-3 rounded-full bg-[#0F172A] hover:bg-[#1E1B4B] text-white font-semibold text-xs tracking-wide transition-all shadow-md hover:shadow-lg flex items-center gap-2 shrink-0">
+              <span>Explore Market Intelligence</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. 6 GLANCEABLE KPI STAT CARDS (Replicating Image 12 exactly) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <!-- Card 1 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-1">
+            <div class="text-[11px] font-semibold text-slate-500">Market Developments</div>
+            <div class="text-2xl font-black text-slate-900">27</div>
+            <div class="flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+              <span>↗ +12%</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-1">
+            <div class="text-[11px] font-semibold text-slate-500">Competitor Activities</div>
+            <div class="text-2xl font-black text-slate-900">15</div>
+            <div class="flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+              <span>↗ +8%</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-1">
+            <div class="text-[11px] font-semibold text-slate-500">Strategic Signals</div>
+            <div class="text-2xl font-black text-indigo-600">5</div>
+            <div class="flex items-center gap-1 text-[11px] font-bold text-indigo-600">
+              <span>↗ +20%</span>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-1">
+            <div class="text-[11px] font-semibold text-slate-500">Opportunities</div>
+            <div class="text-2xl font-black text-slate-900">₹99.9 Cr</div>
+            <div class="flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+              <span>↗ +33%</span>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-1">
+            <div class="text-[11px] font-semibold text-slate-500">Supply Risks</div>
+            <div class="text-2xl font-black text-slate-900">2</div>
+            <div class="flex items-center gap-1 text-[11px] font-bold text-rose-500">
+              <span>↘ -13%</span>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/90 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] space-y-1">
+            <div class="text-[11px] font-semibold text-slate-500">Data Sources</div>
+            <div class="text-2xl font-black text-slate-900">9</div>
+            <div class="flex items-center gap-1 text-[11px] font-semibold text-slate-400">
+              <span>100% Healthy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SPLIT MAIN GRID (Left 8 Cols: Chart & Glanceable Signals; Right 4 Cols: Insights & Competitors) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          <!-- LEFT COLUMN (8 Cols) -->
+          <div class="lg:col-span-8 space-y-6">
+            
+            <!-- MARKET ACTIVITY RECHARTS CURVED CHART (Replicating Image 12) -->
+            <div class="p-6 rounded-3xl bg-white/90 border border-slate-100 shadow-sm space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-slate-100">
+                <div class="space-y-0.5">
+                  <h3 class="text-base font-bold text-slate-900">Market Activity</h3>
+                  <p class="text-xs text-slate-500">Weekly event frequency across trade, tenders, capex and patents</p>
+                </div>
+                <div class="flex items-center gap-1 p-1 bg-slate-100/80 rounded-full text-xs font-semibold text-slate-600">
+                  <button class="px-3 py-1 rounded-full bg-white text-indigo-700 shadow-sm">Signals (5)</button>
+                  <button class="px-3 py-1 rounded-full hover:text-slate-900">Competitor Moves</button>
+                  <button class="px-3 py-1 rounded-full hover:text-slate-900">Tenders (₹99.9 Cr)</button>
+                </div>
+              </div>
+
+              <!-- SVG Curved Area Chart matching Image 12 -->
+              <div class="h-56 w-full pt-2">
+                <svg viewBox="0 0 600 200" class="w-full h-full">
+                  <defs>
+                    <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.45"/>
+                      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+                  
+                  <!-- Grid Lines -->
+                  <line x1="40" y1="40" x2="580" y2="40" stroke="#F1F5F9" stroke-width="1"/>
+                  <line x1="40" y1="90" x2="580" y2="90" stroke="#F1F5F9" stroke-width="1"/>
+                  <line x1="40" y1="140" x2="580" y2="140" stroke="#F1F5F9" stroke-width="1"/>
+                  
+                  <!-- Y Axis Labels -->
+                  <text x="25" y="44" font-size="10" fill="#94A3B8" text-anchor="end">80</text>
+                  <text x="25" y="94" font-size="10" fill="#94A3B8" text-anchor="end">40</text>
+                  <text x="25" y="144" font-size="10" fill="#94A3B8" text-anchor="end">0</text>
+
+                  <!-- Filled Area -->
+                  <path d="M 40 140 Q 90 120, 130 95 T 220 70 T 310 85 T 400 45 T 490 25 T 580 50 L 580 150 L 40 150 Z" fill="url(#areaGradient)"/>
+                  
+                  <!-- Stroke Line -->
+                  <path d="M 40 140 Q 90 120, 130 95 T 220 70 T 310 85 T 400 45 T 490 25 T 580 50" fill="none" stroke="#6366F1" stroke-width="3.5" stroke-linecap="round"/>
+
+                  <!-- Active Point Pin -->
+                  <circle cx="490" cy="25" r="5" fill="#4338CA" stroke="#FFFFFF" stroke-width="2"/>
+                  
+                  <!-- X Axis Labels -->
+                  <text x="40" y="175" font-size="10" fill="#94A3B8">Oct 1</text>
+                  <text x="130" y="175" font-size="10" fill="#94A3B8">Oct 15</text>
+                  <text x="220" y="175" font-size="10" fill="#94A3B8">Oct 29</text>
+                  <text x="310" y="175" font-size="10" fill="#94A3B8">Nov 5</text>
+                  <text x="400" y="175" font-size="10" fill="#94A3B8">Nov 12</text>
+                  <text x="490" y="175" font-size="10" fill="#4F46E5" font-weight="bold">Nov 19 (Peak)</text>
+                  <text x="560" y="175" font-size="10" fill="#94A3B8">Nov 26</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- GLANCE-FIRST STRATEGIC SIGNALS FEED (Anti-Information Bomb UX) -->
+            <div class="p-6 rounded-3xl bg-white/90 border border-slate-100 shadow-sm space-y-4">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <div class="space-y-0.5">
+                  <div class="text-base font-bold text-slate-900 flex items-center gap-2">
+                    <span class="text-indigo-600">🧭</span>
+                    <span>Strategic Signals for Bharat EMS Solutions</span>
+                  </div>
+                  <p class="text-xs text-slate-500">
+                    Level 3 multi-event hypotheses • Click any card to expand full Table 4 citation breakdown
+                  </p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 font-bold">5 Verified</span>
+              </div>
+
+              <!-- Signal Cards (Glanceable) -->
+              <div class="space-y-3">
+                
+                <!-- Signal 1 -->
+                <div onclick="openSignalModal()" class="p-5 rounded-2xl bg-white hover:bg-slate-50/60 border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md space-y-2.5 cursor-pointer group">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                        Technology Pivot
+                      </span>
+                      <span class="text-xs font-semibold text-slate-600">
+                        Kaynes Technology India Ltd • Vishay Intertechnology
+                      </span>
+                    </div>
+                    <span class="flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                      <span>🛡️ High Confidence (96%)</span>
+                    </span>
+                  </div>
+                  <h4 class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug">
+                    Rapid OSAT & SiC/GaN Power Semiconductor Packaging Localization Ahead of EV Inverter Demand
+                  </h4>
+                  <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                    Domestic packaging of SiC MOSFETs reduces import transit time by 4 weeks for EV tier-1s, pressuring non-integrated SMT assemblers to certify local packaging partners.
+                  </p>
+                  <div class="flex items-center justify-between text-xs pt-2 border-t border-slate-50">
+                    <span class="text-slate-400 font-medium">Backed by 5 independent source categories (8 events)</span>
+                    <button class="font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+                      <span>Expand Analysis</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Signal 2 -->
+                <div onclick="openSignalModal()" class="p-5 rounded-2xl bg-white hover:bg-slate-50/60 border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md space-y-2.5 cursor-pointer group">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-50 text-purple-700 border border-purple-200/60">
+                        Capacity Expansion
+                      </span>
+                      <span class="text-xs font-semibold text-slate-600">
+                        Tata Electronics • Tokyo Electron & Lam Research
+                      </span>
+                    </div>
+                    <span class="flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                      <span>🛡️ High Confidence (95%)</span>
+                    </span>
+                  </div>
+                  <h4 class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug">
+                    $5B–$6B Equipment Capex at Dholera Fab Signals Cleanroom Tooling Ramp Amid Domestic Vendor Bottlenecks
+                  </h4>
+                  <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                    Massive capex committed to cleanroom tooling equipment shifts vendor selection to Tier-1 international suppliers, creating secondary sub-tier opportunities for Indian high-precision PCB assembly.
+                  </p>
+                  <div class="flex items-center justify-between text-xs pt-2 border-t border-slate-50">
+                    <span class="text-slate-400 font-medium">Backed by 4 independent source categories (9 events)</span>
+                    <button class="font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+                      <span>Expand Analysis</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Signal 3 -->
+                <div onclick="openSignalModal()" class="p-5 rounded-2xl bg-white hover:bg-slate-50/60 border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md space-y-2.5 cursor-pointer group">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                        Demand Acceleration
+                      </span>
+                      <span class="text-xs font-semibold text-slate-600">
+                        Bharat Electronics Ltd • Indian Railways
+                      </span>
+                    </div>
+                    <span class="flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                      <span>🛡️ High Confidence (95%)</span>
+                    </span>
+                  </div>
+                  <h4 class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug">
+                    Mandated 55% Local Value Addition Drives High-Reliability EMS Pipeline for Kavach & Defense SMT
+                  </h4>
+                  <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                    BEL's ₹42.5 Cr tender on GeM requires Class 3 IPC SMT fabrication. Only domestic facilities with ISO 13485 or AS9100 can qualify, creating captive margins for prepared Indian SMEs.
+                  </p>
+                  <div class="flex items-center justify-between text-xs pt-2 border-t border-slate-50">
+                    <span class="text-slate-400 font-medium">Backed by 4 independent source categories (5 events)</span>
+                    <button class="font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+                      <span>Expand Analysis</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN (4 Cols: Top Insights & Competitors) -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- TOP INSIGHTS (Replicating Image 12) -->
+            <div class="p-6 rounded-3xl bg-white/90 border border-slate-100 shadow-sm space-y-4">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <h3 class="text-base font-bold text-slate-900">Top Insights</h3>
+                <span class="text-xs font-semibold text-indigo-600">Real-time</span>
+              </div>
+
+              <div class="space-y-3.5">
+                <div class="flex items-start gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 mt-1.5 shrink-0"></span>
+                  <div class="space-y-0.5">
+                    <div class="text-xs font-bold text-slate-800 leading-snug">
+                      Tata Electronics $5B–$6B Equipment Tooling in Dholera
+                    </div>
+                    <div class="text-[11px] text-slate-400">Wafer Fab Ramp • 2h ago</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>
+                  <div class="space-y-0.5">
+                    <div class="text-xs font-bold text-slate-800 leading-snug">
+                      Kaynes & Vishay Joint Venture for SiC Packaging
+                    </div>
+                    <div class="text-[11px] text-slate-400">Automotive EV Inverters • 5h ago</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0"></span>
+                  <div class="space-y-0.5">
+                    <div class="text-xs font-bold text-slate-800 leading-snug">
+                      BEL Kavach ₹42.5 Cr SMT Multilayer PCB Tender
+                    </div>
+                    <div class="text-[11px] text-slate-400">Class 3 Local Content • 1d ago</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500 mt-1.5 shrink-0"></span>
+                  <div class="space-y-0.5">
+                    <div class="text-xs font-bold text-slate-800 leading-snug">
+                      Amber Acquired 98.5% Ascent Circuits for Bare PCBs
+                    </div>
+                    <div class="text-[11px] text-slate-400">Supply-Chain Consolidation • 3d ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TRACKED COMPETITORS LIVE QUOTES (Replicating Image 4 & 10) -->
+            <div class="p-6 rounded-3xl bg-white/90 border border-slate-100 shadow-sm space-y-4">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <h3 class="text-base font-bold text-slate-900">Tracked Competitors</h3>
+                <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
+                  NSE Live
+                </span>
+              </div>
+
+              <div class="space-y-2.5">
+                <div class="p-3 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Dixon Technologies</div>
+                    <div class="text-[10px] text-slate-500">₹1,000 Cr Durables SMT Capex</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-xs font-extrabold text-indigo-700">₹13,054.0</div>
+                    <div class="text-[10px] font-semibold text-emerald-600">+1.8%</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Kaynes Technology</div>
+                    <div class="text-[10px] text-slate-500">Vishay OSAT Packaging JV</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-xs font-extrabold text-indigo-700">₹2,890.0</div>
+                    <div class="text-[10px] font-semibold text-emerald-600">+2.4%</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Syrma SGS Tech</div>
+                    <div class="text-[10px] text-slate-500">Kavach SMT & Elemaster JV</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-xs font-extrabold text-indigo-700">₹1,517.0</div>
+                    <div class="text-[10px] font-semibold text-slate-500">+0.3%</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Amber Enterprises</div>
+                    <div class="text-[10px] text-slate-500">98.5% Bare PCB Ascent M&A</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-xs font-extrabold text-indigo-700">₹6,697.0</div>
+                    <div class="text-[10px] font-semibold text-emerald-600">+1.2%</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Tata Electronics</div>
+                    <div class="text-[10px] text-slate-500">Dholera Silicon Cleanroom</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-xs font-extrabold text-purple-700">$5B–$6B</div>
+                    <div class="text-[10px] font-semibold text-purple-600">Anchor Fab</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- VIEW 2: LOGIN PAGE (Replicating Image 13 exactly)                         -->
+  <!-- ========================================================================= -->
+  <div id="view-login" class="block relative z-10 min-h-[calc(100vh-50px)] flex items-center justify-center p-6 sm:p-12">
+    
+    <div class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- LEFT COLUMN: Brand & Live Market Showcase -->
+      <div class="lg:col-span-7 space-y-8 pr-0 lg:pr-6">
+        
+        <!-- Logo Header -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 flex items-center justify-center shadow-md shadow-indigo-500/20">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-black tracking-tight text-slate-900 flex items-center gap-2">
+              MarketMind <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 font-bold">India</span>
+            </span>
+            <span class="text-xs text-slate-500 font-medium">AI-Powered Market Intelligence</span>
+          </div>
+        </div>
+
+        <!-- Main Headline -->
+        <div class="space-y-3">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Turn Market Intelligence into <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Strategic Advantage</span>
+          </h1>
+          <p class="text-lg text-slate-600 font-medium">
+            Explore. Analyse. Decide better.
+          </p>
+        </div>
+
+        <!-- 3D Globe & Preview Cards (Replicating Image 13) -->
+        <div class="p-6 rounded-3xl bg-white/75 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(99,102,241,0.08)] space-y-4">
+          <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-100">
+            <span class="font-bold text-slate-700 flex items-center gap-1.5">
+              <span>📈</span>
+              <span>Live Verified Indian Electronics Intelligence (Nov 2026)</span>
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/60">
+              5 Signals Active
+            </span>
+          </div>
+
+          <!-- 3 Mini Live Cards -->
+          <div class="grid grid-cols-3 gap-3">
+            <div class="p-3 bg-white/90 rounded-2xl border border-slate-100 shadow-sm">
+              <div class="text-[11px] font-bold text-slate-800">Dixon Tech</div>
+              <div class="text-xs font-extrabold text-indigo-600">₹13,054.0</div>
+              <div class="text-[10px] text-slate-500 mt-1">₹1,000 Cr SMT Capex</div>
+            </div>
+            <div class="p-3 bg-white/90 rounded-2xl border border-slate-100 shadow-sm">
+              <div class="text-[11px] font-bold text-slate-800">Kaynes Tech</div>
+              <div class="text-xs font-extrabold text-indigo-600">₹2,890.0</div>
+              <div class="text-[10px] text-slate-500 mt-1">Vishay OSAT JV</div>
+            </div>
+            <div class="p-3 bg-white/90 rounded-2xl border border-slate-100 shadow-sm">
+              <div class="text-[11px] font-bold text-slate-800">Tata Semi</div>
+              <div class="text-xs font-extrabold text-purple-600">$5B–$6B</div>
+              <div class="text-[10px] text-slate-500 mt-1">Dholera Fab Tooling</div>
+            </div>
+          </div>
+
+          <!-- Feature Pills -->
+          <div class="flex flex-wrap items-center gap-2 pt-2">
+            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-50 text-indigo-700">
+              ✓ Zero Hallucinated Citations (§12)
+            </span>
+            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-50 text-purple-700">
+              🛡️ Multi-Tenant Scoped
+            </span>
+            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-700">
+              ⚡ ₹99.9 Cr Tenders Tracked
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Authentication Card -->
+      <div class="lg:col-span-5">
+        <div class="bg-white/95 backdrop-blur-2xl p-8 sm:p-10 rounded-[32px] border border-white/90 shadow-[0_20px_50px_rgba(99,102,241,0.12)] space-y-6">
+          <div class="space-y-1">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Welcome Back
+            </h2>
+            <p class="text-sm text-slate-500 font-medium">
+              Sign in to your market intelligence workspace
+            </p>
+          </div>
+
+          <!-- 1-Click Tenant Selector Pills -->
+          <div class="space-y-2 pt-1">
+            <label class="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center justify-between">
+              <span>Select Tenant Workspace</span>
+              <span class="text-[11px] text-indigo-600 font-semibold">3 active tenants</span>
+            </label>
+            <div class="space-y-2">
+              <button onclick="setLoginEmail('contact@bharat-ems.in', 'Bharat EMS Solutions Pvt Ltd')" class="w-full p-3 rounded-2xl text-left border bg-indigo-50/80 border-indigo-300 text-slate-800 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-slate-900">🏢 Bharat EMS Solutions Pvt Ltd</div>
+                  <div class="text-[10px] text-slate-500">Integrated EMS & Surface Mount Assembly</div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-indigo-700 border border-indigo-200">Enterprise</span>
+              </button>
+              <button onclick="setLoginEmail('strategy@nexgen-inverters.in', 'NexGen EV Inverters Ltd')" class="w-full p-3 rounded-2xl text-left border bg-slate-50/70 hover:bg-slate-100/70 border-slate-200/60 text-slate-800 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-slate-900">🏢 NexGen EV Inverters & Modules</div>
+                  <div class="text-[10px] text-slate-500">Automotive Power Electronics</div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-slate-600 border border-slate-200">Professional</span>
+              </button>
+              <button onclick="setLoginEmail('procurement@shakticircuits.in', 'Shakti Multilayer Circuits')" class="w-full p-3 rounded-2xl text-left border bg-slate-50/70 hover:bg-slate-100/70 border-slate-200/60 text-slate-800 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-slate-900">🏢 Shakti Multilayer Circuits & Fab</div>
+                  <div class="text-[10px] text-slate-500">Bare Multilayer PCB Fabrication</div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-slate-600 border border-slate-200">Growth</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Credentials Form -->
+          <form onsubmit="doLogin(event)" class="space-y-4 pt-2">
+            <div class="space-y-1.5">
+              <label class="text-xs font-semibold text-slate-700">Email address</label>
+              <input id="login-email-input" type="email" value="contact@bharat-ems.in" class="w-full px-4 py-2.5 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500">
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-xs font-semibold text-slate-700">Password</label>
+              <input type="password" value="marketpulse2026" class="w-full px-4 py-2.5 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500">
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-2xl bg-[#0F172A] hover:bg-[#1E1B4B] text-white font-bold text-xs tracking-wide shadow-lg shadow-indigo-950/10 transition-all flex items-center justify-center gap-2">
+              <span>Sign In to Workspace</span>
+              <span>→</span>
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- VIEW 3: TABLE 4 STRATEGIC SIGNAL DRAWER (Anti-Information Bomb Modal)     -->
+  <!-- ========================================================================= -->
+  <div id="signal-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/40 backdrop-blur-sm animate-fadeIn">
+    
+    <div class="glass-modal w-full max-w-4xl max-h-[90vh] rounded-[32px] overflow-hidden flex flex-col shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="p-6 sm:p-7 border-b border-slate-100 flex items-start justify-between gap-4 bg-gradient-to-r from-white via-indigo-50/30 to-purple-50/30">
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700">
+              Technology Pivot
+            </span>
+            <span class="text-xs font-semibold text-slate-500">
+              Kaynes Technology India Ltd • Vishay Intertechnology
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+              🛡️ High Confidence (96%)
+            </span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight">
+            Rapid OSAT & SiC/GaN Power Semiconductor Packaging Localization Ahead of EV Inverter Demand
+          </h2>
+        </div>
+        <button onclick="closeSignalModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm transition-colors">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body (The Full Table 4 Guardrailed Schema) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-xs leading-relaxed">
+        
+        <!-- SECTION A: WHAT HAPPENED (Empirical Facts) vs WHY IT MATTERS (Inferences) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- FACTS -->
+          <div class="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/70 space-y-2.5">
+            <div class="font-bold text-slate-900 flex items-center gap-1.5 text-xs uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>1. What Happened (Empirical Facts)</span>
+            </div>
+            <ul class="space-y-2 text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-600 font-bold">•</span>
+                <span>Vishay Intertechnology and Kaynes Technology entered an active Joint Venture to establish a semiconductor power module assembly and testing unit in India.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-600 font-bold">•</span>
+                <span>Kaynes Q2 FY26 disclosures confirm their active order book pipeline exceeds 2 billion semiconductor components for high-reliability industrial and automotive modules.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- INFERENCES -->
+          <div class="p-5 rounded-2xl bg-indigo-50/60 border border-indigo-100 space-y-2.5">
+            <div class="font-bold text-indigo-950 flex items-center gap-1.5 text-xs uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              <span>2. Why It May Matter (Strategic Inferences)</span>
+            </div>
+            <ul class="space-y-2 text-indigo-900">
+              <li class="flex items-start gap-2">
+                <span class="text-indigo-600 font-bold">•</span>
+                <span><em>Inference:</em> Domestic packaging of SiC MOSFETs reduces import transit time by 4 weeks for EV tier-1 inverter suppliers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-indigo-600 font-bold">•</span>
+                <span><em>Inference:</em> Competitors without captive OSAT packaging will face margin compression as tier-1 automotive OEMs mandate domestic supply-chain localization.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SECTION B: WHO/WHAT AFFECTED & NEXT INVESTIGATION ACTIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider">
+              3. Who & What Could Be Affected
+            </div>
+            <p class="text-slate-600">
+              Tier-2 automotive inverter assemblers, SMT PCB fabrication houses lacking cleanroom module lines, and EV motor controller manufacturers across Pune, Chennai, and NCR clusters.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider">
+              4. Suggested Next Actions
+            </div>
+            <p class="text-slate-600">
+              Audit Kaynes Sanand facility for automotive AEC-Q101 qualification samples; engage Vishay sales engineering for dual-source SiC discrete allocations before commercial ramp.
+            </p>
+          </div>
+        </div>
+
+        <!-- SECTION C: AUDIT-GRADE CITATION EVIDENCE (§12 Guardrail - Zero Hallucinations) -->
+        <div class="space-y-3 pt-2 border-t border-slate-100">
+          <div class="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center justify-between">
+            <span>5. Corroborated Evidence Documents (100% Grounded)</span>
+            <span class="text-[10px] text-emerald-600 font-semibold">0 Hallucinated Citations</span>
+          </div>
+
+          <div class="space-y-2">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/60 flex items-center justify-between">
+              <div class="space-y-0.5">
+                <div class="font-bold text-slate-800">BSE & NSE Statutory Disclosure</div>
+                <div class="text-[11px] text-slate-500 font-mono">"Kaynes Technology India Ltd files joint venture agreement with Vishay Intertechnology."</div>
+              </div>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-indigo-700 border border-indigo-200">Statutory (0.99)</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/60 flex items-center justify-between">
+              <div class="space-y-0.5">
+                <div class="font-bold text-slate-800">Financial Express Financial Reporting</div>
+                <div class="text-[11px] text-slate-500 font-mono">"US' Vishay Intertechnology & Kaynes form India JV for chip manufacturing."</div>
+              </div>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-indigo-700 border border-indigo-200">Financial News (0.88)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION D: STAGE 10 USER FEEDBACK CAPTURE -->
+        <div class="p-5 rounded-2xl bg-indigo-50/50 border border-indigo-100 flex items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-slate-900">Stage 10 Feedback Engine</div>
+            <div class="text-[11px] text-slate-500">Is this strategic intelligence hypothesis useful for your workspace?</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="submitFeedback('useful')" class="px-4 py-2 rounded-xl bg-white hover:bg-emerald-50 text-emerald-700 font-bold border border-emerald-200 shadow-sm transition-all flex items-center gap-1.5">
+              <span>👍 Useful</span>
+            </button>
+            <button onclick="submitFeedback('not_useful')" class="px-4 py-2 rounded-xl bg-white hover:bg-rose-50 text-rose-700 font-bold border border-rose-200 shadow-sm transition-all flex items-center gap-1.5">
+              <span>👎 Not Relevant</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 px-6 border-t border-slate-100 bg-slate-50/80 flex items-center justify-between text-xs">
+        <span class="text-slate-400 font-mono">Signal ID: sig_osat_sic_01 • Workspace: ws_electronics_default</span>
+        <button onclick="closeSignalModal()" class="px-5 py-2 rounded-full bg-[#0F172A] text-white font-bold hover:bg-[#1E1B4B] transition-all">
+          Close Analysis
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // View Switcher logic
+    function switchView(viewName) {
+      document.getElementById('view-home').classList.add('hidden');
+      document.getElementById('view-login').classList.add('hidden');
+
+      const btnHome = document.getElementById('btn-view-home');
+      const btnLogin = document.getElementById('btn-view-login');
+
+      if (viewName === 'home') {
+        document.getElementById('view-home').classList.remove('hidden');
+        btnHome.className = "px-4 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm flex items-center gap-1.5 transition-all";
+        btnLogin.className = "px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-700/60 flex items-center gap-1.5 transition-all";
+      } else if (viewName === 'login') {
+        document.getElementById('view-login').classList.remove('hidden');
+        btnLogin.className = "px-4 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm flex items-center gap-1.5 transition-all";
+        btnHome.className = "px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-700/60 flex items-center gap-1.5 transition-all";
+      }
+    }
+
+    // Modal logic
+    function openSignalModal() {
+      document.getElementById('signal-modal').classList.remove('hidden');
+    }
+    function closeSignalModal() {
+      document.getElementById('signal-modal').classList.add('hidden');
+    }
+
+    // Dropdown toggle
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    // Workspace change
+    function changeWorkspace(name, subsector) {
+      document.getElementById('current-ws-label').innerText = name;
+      toggleDropdown('ws-menu');
+    }
+
+    // Quick Login Demo selection
+    function setLoginEmail(email, wsName) {
+      document.getElementById('login-email-input').value = email;
+    }
+
+    function doLogin(e) {
+      e.preventDefault();
+      switchView('home');
+    }
+
+    function submitFeedback(rating) {
+      alert("Stage 10 Feedback Recorded: " + rating + " for workspace ws_electronics_default! Model relevance scores updated.");
+      closeSignalModal();
+    }
+  </script>
+</body>
+</html>

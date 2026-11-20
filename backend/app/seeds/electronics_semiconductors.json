@@ -1,0 +1,453 @@
+{
+  "industry": {
+    "industry_id": "electronics_semiconductors",
+    "name": "Electronics & Semiconductor Manufacturing",
+    "market_size_inr_cr": "1,85,000 Cr",
+    "cagr_growth": "22.4%",
+    "key_drivers": [
+      "PLI 2.0 for IT Hardware & Components",
+      "Semicon India $10B Incentive Framework",
+      "Domestic Value Addition (DVA) Mandates",
+      "Automotive EV Powertrain Localisation"
+    ],
+    "active_competitors_tracked": 14
+  },
+  "default_user_company": {
+    "company_name": "AuraChip Electronics Pvt Ltd",
+    "website": "https://aurachip-tech.in",
+    "description": "Indian manufacturer of high-density interconnect PCB assemblies and embedded IoT sensor modules for automotive Tier-1s and industrial automation.",
+    "sector": "Electronics & Semiconductor Manufacturing",
+    "subsector": "EMS & Sensor Packaging",
+    "products": [
+      "Industrial SMT PCB Assembly",
+      "Automotive ECU Sensor Modules",
+      "Power Management Controller Boards"
+    ],
+    "regions": [
+      "Tamil Nadu",
+      "Karnataka",
+      "Maharashtra",
+      "NCR"
+    ],
+    "customer_segments": [
+      "Automotive Tier-1",
+      "Industrial Automation OEMs",
+      "Smart Metering Utilities"
+    ]
+  },
+  "competitor_candidates": [
+    {
+      "entity_id": "comp_dixon",
+      "company_name": "Dixon Technologies (India) Ltd",
+      "subsector": "EMS & Precision Electronics",
+      "headquarters": "Noida, Uttar Pradesh",
+      "approx_revenue_inr_cr": "17,690 Cr",
+      "products": [
+        "Consumer EMS",
+        "Telecom Hardware",
+        "Industrial PCBs",
+        "Semiconductor Packaging (OSAT JV)"
+      ],
+      "relevance_score": 0.94,
+      "reason_code": "Direct EMS capacity overlap; expanding into precision component assembly and OSAT packaging in North and South clusters.",
+      "match_dimensions": [
+        "Product Overlap (PCB/EMS)",
+        "Customer Adjacency",
+        "Active Capex in Industrial Electronics"
+      ]
+    },
+    {
+      "entity_id": "comp_kaynes",
+      "company_name": "Kaynes Technology India Ltd",
+      "subsector": "Integrated EMS & OSAT",
+      "headquarters": "Mysuru, Karnataka",
+      "approx_revenue_inr_cr": "1,800 Cr",
+      "products": [
+        "Automotive ECUs",
+        "Aerospace & Defense Electronics",
+        "Smart Meter PCBs",
+        "OSAT Semiconductor Facility"
+      ],
+      "relevance_score": 0.96,
+      "reason_code": "High direct overlap in automotive Tier-1 ECU controllers and industrial sensing hardware, with new OSAT plant in Sanand.",
+      "match_dimensions": [
+        "Automotive Tier-1 Customer Match",
+        "Industrial SMT Overlap",
+        "Advanced Packaging Rivalry"
+      ]
+    },
+    {
+      "entity_id": "comp_syrma",
+      "company_name": "Syrma SGS Technology Ltd",
+      "subsector": "EMS & Custom Electronics Design",
+      "headquarters": "Chennai, Tamil Nadu",
+      "approx_revenue_inr_cr": "2,790 Cr",
+      "products": [
+        "Precision Magnetics",
+        "Automotive Electronics",
+        "RFID & IoT Modules",
+        "Medical Electronics Assembly"
+      ],
+      "relevance_score": 0.91,
+      "reason_code": "Aggressive expansion in automotive electronics and IoT sensor packaging with manufacturing base in Chennai and Baddi.",
+      "match_dimensions": [
+        "Geographic Overlap (Tamil Nadu)",
+        "IoT/Sensor Product Similarity",
+        "Export Competition"
+      ]
+    },
+    {
+      "entity_id": "comp_tata_semi",
+      "company_name": "Tata Electronics Pvt Ltd",
+      "subsector": "Semiconductor Fab & OSAT",
+      "headquarters": "Hosur / Dholera",
+      "approx_revenue_inr_cr": "Major Capex Phase",
+      "products": [
+        "Silicon Fabrication (28nm/40nm)",
+        "Advanced Semiconductor Packaging",
+        "Precision Machining Enclosures"
+      ],
+      "relevance_score": 0.88,
+      "reason_code": "Upstream semiconductor fab & OSAT provider setting benchmark for domestic component procurement and supply chain integration.",
+      "match_dimensions": [
+        "Supply Chain Adjacency",
+        "National Talent Magnet",
+        "Upstream Ecosystem Anchor"
+      ]
+    },
+    {
+      "entity_id": "comp_amber",
+      "company_name": "Amber Enterprises (Ascent Circuits)",
+      "subsector": "Bare PCB & Component Manufacturing",
+      "headquarters": "Gurugram / Hosur",
+      "approx_revenue_inr_cr": "6,700 Cr",
+      "products": [
+        "Multilayer Bare PCBs",
+        "Power Electronics",
+        "HVAC Inverter Controllers"
+      ],
+      "relevance_score": 0.89,
+      "reason_code": "Acquired Ascent Circuits to control bare PCB supply chain; expanding directly into automotive double-sided and multilayer boards.",
+      "match_dimensions": [
+        "Raw Substrate / PCB Overlap",
+        "Automotive Sub-Supplier Competition"
+      ]
+    }
+  ],
+  "competitor_events": [
+    {
+      "event_id": "evt_001",
+      "entity_id": "comp_kaynes",
+      "entity_name": "Kaynes Technology India Ltd",
+      "event_type": "capex",
+      "title": "Kaynes breaks ground on \u20b93,300 Cr OSAT semiconductor assembly plant in Sanand",
+      "summary": "Phase-1 approved under India Semiconductor Mission; plant designed to package QFN, BGA, and power modules for automotive Tier-1 applications.",
+      "event_date": "2026-11-04",
+      "source_name": "BSE Regulatory Disclosures",
+      "source_url": "https://www.bseindia.com/stock-share-price/kaynes-technology-india-ltd/KAYNES/543664/corp-announcements/",
+      "confidence": "High"
+    },
+    {
+      "event_id": "evt_002",
+      "entity_id": "comp_dixon",
+      "entity_name": "Dixon Technologies (India) Ltd",
+      "event_type": "expansion",
+      "title": "Dixon signs JV with Japanese supplier to localize display controller PCB modules",
+      "summary": "Targeting 6 million units annual production capacity in Noida Sector 68 facility under Modified Electronics Manufacturing Clusters (EMC 2.0).",
+      "event_date": "2026-10-28",
+      "source_name": "Press Information Bureau (PIB)",
+      "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2049182",
+      "confidence": "High"
+    },
+    {
+      "event_id": "evt_003",
+      "entity_id": "comp_syrma",
+      "entity_name": "Syrma SGS Technology Ltd",
+      "event_type": "hiring",
+      "title": "Syrma SGS opens 60+ engineering positions for SMT line quality & firmware testing in Chennai",
+      "summary": "Specialized job postings for high-reliability automotive powertrain PCB assembly and ISO 26262 functional safety auditors.",
+      "event_date": "2026-11-12",
+      "source_name": "Company Career Portal & LinkedIn Signal",
+      "source_url": "https://syrmasgs.com/careers/chennai-expansion",
+      "confidence": "Medium"
+    },
+    {
+      "event_id": "evt_004",
+      "entity_id": "comp_amber",
+      "entity_name": "Amber Enterprises (Ascent Circuits)",
+      "event_type": "partnership",
+      "title": "Ascent Circuits partners with Korean substrate maker for 12-layer HDI PCB technology",
+      "summary": "Enables domestic fabrication of ultra-dense automotive motherboard substrates, reducing reliance on Shenzhen imports.",
+      "event_date": "2026-10-15",
+      "source_name": "NSE Corporate Filings",
+      "source_url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
+      "confidence": "High"
+    }
+  ],
+  "trade_analytics": {
+    "hs_code": "8542",
+    "commodity_title": "Electronic Integrated Circuits and Microassemblies",
+    "annual_import_usd_b": 14.8,
+    "annual_yoy_growth_percent": 18.6,
+    "key_supplying_nations": [
+      "China (38%)",
+      "Taiwan (24%)",
+      "Vietnam (15%)",
+      "Singapore (9%)",
+      "Others (14%)"
+    ],
+    "monthly_trend": [
+      {
+        "month": "Jun 2026",
+        "import_value_usd_m": 1120.4,
+        "export_value_usd_m": 184.2,
+        "top_origin": "China"
+      },
+      {
+        "month": "Jul 2026",
+        "import_value_usd_m": 1210.8,
+        "export_value_usd_m": 198.5,
+        "top_origin": "China"
+      },
+      {
+        "month": "Aug 2026",
+        "import_value_usd_m": 1295.3,
+        "export_value_usd_m": 224.1,
+        "top_origin": "Taiwan"
+      },
+      {
+        "month": "Sep 2026",
+        "import_value_usd_m": 1340.0,
+        "export_value_usd_m": 251.8,
+        "top_origin": "Taiwan"
+      },
+      {
+        "month": "Oct 2026",
+        "import_value_usd_m": 1412.6,
+        "export_value_usd_m": 289.4,
+        "top_origin": "China"
+      },
+      {
+        "month": "Nov 2026",
+        "import_value_usd_m": 1465.1,
+        "export_value_usd_m": 312.0,
+        "top_origin": "Taiwan"
+      }
+    ]
+  },
+  "tenders": [
+    {
+      "tender_id": "GEM/2026/B/8912401",
+      "title": "Supply and Testing of High-Reliability Multilayer SMT PCB Assemblies for Kavach Collision Avoidance",
+      "issuing_authority": "Bharat Electronics Limited (BEL) / Indian Railways",
+      "portal": "GeM",
+      "approx_value_inr_cr": 42.5,
+      "published_date": "2026-11-09",
+      "closing_date": "2026-11-30",
+      "location": "Bengaluru, Karnataka",
+      "relevant_subsectors": [
+        "EMS & Sensor Packaging",
+        "Industrial PCBs"
+      ],
+      "source_url": "https://bidplus-global.gem.gov.in/bidlists/GEM-2026-B-8912401"
+    },
+    {
+      "tender_id": "CPPP/2026/MEITY/55410",
+      "title": "Automated High-Speed Optical Inspection (AOI) & In-Circuit Testing Units for Common Facility Centre",
+      "issuing_authority": "MeitY / EMC 2.0 Project Management Cell",
+      "portal": "CPPP",
+      "approx_value_inr_cr": 18.2,
+      "published_date": "2026-11-02",
+      "closing_date": "2026-12-05",
+      "location": "Sriperumbudur, Tamil Nadu",
+      "relevant_subsectors": [
+        "Electronics Manufacturing Services (EMS)"
+      ],
+      "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndTenderDetailsPage&tenderId=55410"
+    },
+    {
+      "tender_id": "GEM/2026/B/8771902",
+      "title": "Procurement of Silicon Carbide (SiC) Power Module Test Benches for Electric Bus Chargers",
+      "issuing_authority": "Convergence Energy Services Ltd (CESL)",
+      "portal": "GeM",
+      "approx_value_inr_cr": 12.8,
+      "published_date": "2026-11-14",
+      "closing_date": "2026-12-10",
+      "location": "New Delhi / Pune",
+      "relevant_subsectors": [
+        "Power Electronics",
+        "Automotive ECU Sensor Modules"
+      ],
+      "source_url": "https://bidplus-global.gem.gov.in/bidlists/GEM-2026-B-8771902"
+    }
+  ],
+  "policies": [
+    {
+      "policy_id": "POL_MEITY_PLI_2026",
+      "title": "Disbursement of \u20b92,450 Cr Production Linked Incentives under PLI 2.0 for Electronic Components",
+      "authority": "Ministry of Electronics & Information Technology (MeitY)",
+      "summary": "Accelerates 4% to 6% incremental production cashbacks for domestic sub-assembly makers achieving >40% local bill-of-materials sourcing.",
+      "date_notified": "2026-11-01",
+      "impact_level": "High",
+      "relevant_subsectors": [
+        "EMS & Sensor Packaging",
+        "Bare PCB Fabrication"
+      ],
+      "source_url": "https://www.meity.gov.in/esdm/pli-electronic-components-notification-2026"
+    },
+    {
+      "policy_id": "POL_SPECS_REVISION",
+      "title": "Scheme for Promotion of Manufacturing of Electronic Components and Semiconductors (SPECS 2.0)",
+      "authority": "DPIIT & MeitY",
+      "summary": "Capital subsidy of 25% on plant and machinery extended to multi-layer ceramic capacitors (MLCCs) and specialized semiconductor lead frames.",
+      "date_notified": "2026-10-18",
+      "impact_level": "High",
+      "relevant_subsectors": [
+        "Semiconductor Packaging",
+        "Industrial SMT"
+      ],
+      "source_url": "https://www.meity.gov.in/specs-guidelines-revised"
+    }
+  ],
+  "patents": [
+    {
+      "patent_id": "IN-PAT-2026-41092",
+      "title": "High Thermal Dissipation Direct-Bonded Copper Substrate for Automotive Power Inverters",
+      "applicant": "Kaynes Technology & IISc Joint Research Cell",
+      "publication_date": "2026-11-06",
+      "ipc_code": "H01L 23/36",
+      "summary": "Novel micro-channel heat sinking geometry for high-current automotive motor controller modules, reducing thermal resistance by 31%.",
+      "journal_source": "The Patent Office Journal No. 45/2026",
+      "source_url": "https://ipindia.gov.in/resource-links/journals/journal_45_2026.pdf#page=114"
+    },
+    {
+      "patent_id": "IN-PAT-2026-38914",
+      "title": "Automated Low-Void Solder Paste Deposition Method for Micro-BGA Packages",
+      "applicant": "Syrma SGS R&D Foundation",
+      "publication_date": "2026-10-23",
+      "ipc_code": "B23K 35/02",
+      "summary": "Electrochemical stencil coating minimizing solder bridging in dense 0.4mm pitch surface-mount packaging for telecommunication transceivers.",
+      "journal_source": "The Patent Office Journal No. 43/2026",
+      "source_url": "https://ipindia.gov.in/resource-links/journals/journal_43_2026.pdf#page=82"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_commerce_trade",
+      "name": "Commerce Trade Analytics Portal (DGCIS)",
+      "publisher": "Department of Commerce, Ministry of Commerce & Industry",
+      "domain": "trade-analytics.commerce.gov.in",
+      "source_type": "trade_database",
+      "refresh_frequency": "Monthly Official Release",
+      "last_fetched_at": "Today, 06:00 IST",
+      "records_count": 4820,
+      "reliability_score": 0.99,
+      "status": "healthy",
+      "access_method": "Official DGCIS Public Portal"
+    },
+    {
+      "source_id": "src_gem_bids",
+      "name": "Government e-Marketplace (GeM) Bid Portal",
+      "publisher": "GeM SPV, Ministry of Commerce & Industry",
+      "domain": "bidplus-global.gem.gov.in",
+      "source_type": "tender_board",
+      "refresh_frequency": "Continuous / Daily",
+      "last_fetched_at": "Today, 14:30 IST",
+      "records_count": 1280,
+      "reliability_score": 0.97,
+      "status": "healthy",
+      "access_method": "GeM Public Bid Feed"
+    },
+    {
+      "source_id": "src_bse_filings",
+      "name": "BSE India Corporate Announcements",
+      "publisher": "Bombay Stock Exchange Ltd",
+      "domain": "bseindia.com",
+      "source_type": "exchange_filings",
+      "refresh_frequency": "Real-time Regulatory Disclosures",
+      "last_fetched_at": "12 mins ago",
+      "records_count": 3410,
+      "reliability_score": 1.0,
+      "status": "healthy",
+      "access_method": "BSE Regulatory RSS/API"
+    },
+    {
+      "source_id": "src_ipindia_patents",
+      "name": "IP India Patent Office Official Journal",
+      "publisher": "Controller General of Patents, Designs & Trade Marks",
+      "domain": "ipindia.gov.in",
+      "source_type": "patent_journal",
+      "refresh_frequency": "Weekly (Every Friday)",
+      "last_fetched_at": "15 Nov 2026",
+      "records_count": 920,
+      "reliability_score": 0.98,
+      "status": "healthy",
+      "access_method": "Official Gazette Extraction"
+    },
+    {
+      "source_id": "src_meity_policy",
+      "name": "MeitY Policy Notifications & PIB",
+      "publisher": "Ministry of Electronics & IT / Press Information Bureau",
+      "domain": "meity.gov.in",
+      "source_type": "government_portal",
+      "refresh_frequency": "Continuous",
+      "last_fetched_at": "Today, 09:15 IST",
+      "records_count": 512,
+      "reliability_score": 0.99,
+      "status": "healthy",
+      "access_method": "PIB & Ministry Gazette Portal"
+    },
+    {
+      "source_id": "src_google_news_rss",
+      "name": "Google News RSS Live Connector",
+      "publisher": "Google News & Indian Financial Media (ET, Fortune, Moneycontrol)",
+      "domain": "news.google.com",
+      "source_type": "market_news",
+      "refresh_frequency": "Real-time Poll",
+      "last_fetched_at": "Today, Live Feed",
+      "records_count": 1250,
+      "reliability_score": 0.92,
+      "status": "healthy",
+      "access_method": "Public RSS Feed"
+    },
+    {
+      "source_id": "src_yahoo_finance",
+      "name": "Yahoo Finance Real-Time Quotes",
+      "publisher": "Yahoo Finance & National Stock Exchange (NSE)",
+      "domain": "finance.yahoo.com",
+      "source_type": "market_pricing",
+      "refresh_frequency": "15-Min Market Hours",
+      "last_fetched_at": "Today, Market Close",
+      "records_count": 500,
+      "reliability_score": 0.95,
+      "status": "healthy",
+      "access_method": "Public Financial API"
+    },
+    {
+      "source_id": "src_openalex_research",
+      "name": "OpenAlex Open Research Index",
+      "publisher": "OurResearch / OpenAlex Global Scholarly Dataset",
+      "domain": "openalex.org",
+      "source_type": "research_database",
+      "refresh_frequency": "Weekly API Sync",
+      "last_fetched_at": "Today, 04:00 IST",
+      "records_count": 20840,
+      "reliability_score": 0.96,
+      "status": "healthy",
+      "access_method": "REST API (CC0 / Open Data)"
+    },
+    {
+      "source_id": "src_pib_releases",
+      "name": "Press Information Bureau (PIB)",
+      "publisher": "Ministry of Information and Broadcasting, Govt of India",
+      "domain": "pib.gov.in",
+      "source_type": "government_press",
+      "refresh_frequency": "Hourly Release",
+      "last_fetched_at": "Today, 11:30 IST",
+      "records_count": 3420,
+      "reliability_score": 0.99,
+      "status": "healthy",
+      "access_method": "Official PIB Public Portal"
+    }
+  ]
+}
