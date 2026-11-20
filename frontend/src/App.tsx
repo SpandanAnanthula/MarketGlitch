@@ -13,6 +13,11 @@ import { DataSources } from './pages/DataSources';
 import { MyData } from './pages/MyData';
 import { SettingsView } from './pages/SettingsView';
 import { OnboardingModal } from './pages/OnboardingModal';
+import { AiStrategyChat } from './components/AiStrategyChat';
+import { WhatIfSimulator } from './components/WhatIfSimulator';
+import { LiveIntelligenceTicker } from './components/LiveIntelligenceTicker';
+import { ProductTour } from './components/ProductTour';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { api } from './services/api';
 import { TENANT_WORKSPACES } from './data/tenantWorkspaces';
 import { 
@@ -40,6 +45,8 @@ export function App() {
   // Navigation State
   const [currentTab, setCurrentTab] = useState<string>('dashboard');
   const [isOnboardingOpen, setIsOnboardingOpen] = useState<boolean>(false);
+  const [isWhatIfOpen, setIsWhatIfOpen] = useState<boolean>(false);
+  const [isTourOpen, setIsTourOpen] = useState<boolean>(false);
 
   // Intelligence State
   const [currentProfile, setCurrentProfile] = useState<CompanyProfile | null>(TENANT_WORKSPACES['ws_electronics_default'].profile);
@@ -138,89 +145,110 @@ export function App() {
   // If viewing the Login Page
   if (!isLoggedIn) {
     return (
-      <div className="relative">
-        <div className="fixed top-4 right-4 z-50">
-          <button
-            onClick={() => setIsLoggedIn(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 text-white text-xs font-semibold shadow-lg hover:bg-indigo-600 transition-colors"
-          >
-            <LayoutDashboard className="w-3.5 h-3.5" />
-            <span>Switch to Executive Dashboard View</span>
-          </button>
+      <ErrorBoundary>
+        <div className="relative">
+          <div className="fixed top-4 right-4 z-50">
+            <button
+              onClick={() => setIsLoggedIn(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 text-white text-xs font-semibold shadow-lg hover:bg-indigo-600 transition-colors"
+            >
+              <LayoutDashboard className="w-3.5 h-3.5" />
+              <span>Switch to Executive Dashboard View</span>
+            </button>
+          </div>
+          <LoginPage onLogin={handleLogin} />
         </div>
-        <LoginPage onLogin={handleLogin} />
-      </div>
+      </ErrorBoundary>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#F6F8FD] flex flex-col text-slate-800 font-sans selection:bg-indigo-500/20 selection:text-indigo-800">
-      
-      {/* Reviewer Quick-Switch Bar */}
-      <div className="bg-slate-900 text-slate-200 text-xs px-4 py-1.5 flex items-center justify-between border-b border-slate-800">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-semibold text-white">MarketMind India</span>
-          <span className="text-slate-400 hidden sm:inline">• Electronics & Semiconductor Intelligence SaaS</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="text-slate-400 text-[11px] hidden md:inline">Current: {workspaceNames[currentWorkspaceId]}</span>
-          <button
-            onClick={handleLogout}
-            className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 hover:bg-slate-700 text-indigo-300 hover:text-white transition-colors text-[11px] font-semibold"
-          >
-            <LogIn className="w-3 h-3" />
-            <span>View Login Page</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Top Application Header (Image 12 & 3) */}
-      <Header
-        currentWorkspaceId={currentWorkspaceId}
-        onSelectWorkspace={handleWorkspaceChange}
-        currentTimeline={timelineFilter}
-        onSelectTimeline={handleTimelineChange}
-        alerts={alerts}
-        userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
-        onNavigateSettings={() => setCurrentTab('settings')}
-        onLogout={handleLogout}
-      />
-
-      {/* Public Ingestion Freshness Bar (§18 Source Governance) */}
-      <SourceFreshnessBar sources={sources} />
-
-      {/* Main Layout Container */}
-      <div className="flex-1 flex overflow-hidden">
+    <ErrorBoundary>
+      <div className="h-screen w-screen overflow-hidden bg-[#F6F8FD] flex flex-col text-slate-800 font-sans selection:bg-indigo-500/20 selection:text-indigo-800">
         
-        {/* Navigation Sidebar (Image 12 & 3) */}
-        <Sidebar
-          currentTab={currentTab}
-          onSelectTab={setCurrentTab}
-          workspaceName={workspaceNames[currentWorkspaceId]}
-          userName={userEmail.split('@')[0]}
-          userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
-          onLogout={handleLogout}
-        />
+        {/* Top Application Header & Sticky Bars (Locked Top Bar) */}
+        <div className="sticky top-0 z-40 shrink-0 bg-white shadow-2xs">
+          
+          {/* Reviewer Quick-Switch Bar */}
+          <div className="bg-slate-900 text-slate-200 text-xs px-4 py-1.5 flex items-center justify-between border-b border-slate-800">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-semibold text-white">MarketMind India</span>
+              <span className="text-slate-400 hidden sm:inline">• Electronics & Semiconductor Intelligence SaaS</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-slate-400 text-[11px] hidden md:inline">Current: {workspaceNames[currentWorkspaceId]}</span>
+              <button
+                onClick={() => setIsTourOpen(true)}
+                className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-indigo-900/60 hover:bg-indigo-800 text-indigo-200 hover:text-white transition-colors text-[11px] font-semibold border border-indigo-700/60"
+              >
+                <span>💡 Tour Guide</span>
+              </button>
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 hover:bg-slate-700 text-indigo-300 hover:text-white transition-colors text-[11px] font-semibold"
+              >
+                <LogIn className="w-3 h-3" />
+                <span>View Login Page</span>
+              </button>
+            </div>
+          </div>
 
-        {/* Dynamic Page Viewport */}
-        <main className="flex-1 overflow-y-auto p-6 md:p-8">
-          <div className="max-w-7xl mx-auto">
-            
-            {/* 1. EXECUTIVE DASHBOARD (Image 12, 1, 8) */}
-            {(currentTab === 'dashboard' || currentTab === 'overview') && (
-              <ExecutiveDashboard
-                signals={signals}
-                timeline={timeline}
-                competitors={candidates}
-                workspaceName={workspaceNames[currentWorkspaceId]}
-                workspaceId={currentWorkspaceId}
-                timelineFilter={timelineFilter}
-                onSelectTimeline={handleTimelineChange}
-                onExploreStrategic={() => setCurrentTab('strategic')}
-                onFeedback={handleFeedback}
-              />
-            )}
+          {/* Real-time Animated Intelligence Ticker */}
+          <LiveIntelligenceTicker
+            timelineFilter={timelineFilter}
+            onExploreSignal={() => setCurrentTab('strategic')}
+          />
+
+          {/* Top Application Header (Image 12 & 3) */}
+          <Header
+            currentWorkspaceId={currentWorkspaceId}
+            onSelectWorkspace={handleWorkspaceChange}
+            currentTimeline={timelineFilter}
+            onSelectTimeline={handleTimelineChange}
+            alerts={alerts}
+            userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
+            onNavigateSettings={() => setCurrentTab('settings')}
+            onOpenTour={() => setIsTourOpen(true)}
+            onLogout={handleLogout}
+          />
+
+          {/* Public Ingestion Freshness Bar (§18 Source Governance) */}
+          <SourceFreshnessBar sources={sources} />
+        </div>
+
+        {/* Main Layout Container (Sidebar locked on left, main area scrollable) */}
+        <div className="flex-1 flex overflow-hidden min-h-0">
+          
+          {/* Navigation Sidebar (Locked Pinned Left) */}
+          <Sidebar
+            currentTab={currentTab}
+            onSelectTab={setCurrentTab}
+            workspaceName={workspaceNames[currentWorkspaceId]}
+            userName={userEmail.split('@')[0]}
+            userInitials={TENANT_WORKSPACES[currentWorkspaceId]?.initials || userEmail.slice(0, 2).toUpperCase()}
+            onLogout={handleLogout}
+          />
+
+          {/* Dynamic Page Viewport */}
+          <main className="flex-1 overflow-y-auto p-6 md:p-8">
+            <div className="max-w-7xl mx-auto">
+              
+              {/* 1. EXECUTIVE DASHBOARD (Image 12, 1, 8) */}
+              {(currentTab === 'dashboard' || currentTab === 'overview') && (
+                <ExecutiveDashboard
+                  signals={signals}
+                  timeline={timeline}
+                  competitors={candidates}
+                  workspaceName={workspaceNames[currentWorkspaceId]}
+                  workspaceId={currentWorkspaceId}
+                  timelineFilter={timelineFilter}
+                  onSelectTimeline={handleTimelineChange}
+                  onExploreStrategic={() => setCurrentTab('strategic')}
+                  onOpenWhatIf={() => setIsWhatIfOpen(true)}
+                  onFeedback={handleFeedback}
+                />
+              )}
 
             {/* 2. MY COMPANY (Image 10) */}
             {currentTab === 'my-company' && (
@@ -316,6 +344,28 @@ export function App() {
         </main>
       </div>
 
+      {/* Floating AI Strategist Assistant */}
+      <AiStrategyChat
+        workspaceId={currentWorkspaceId}
+        workspaceName={workspaceNames[currentWorkspaceId]}
+        timelineFilter={timelineFilter}
+        onOpenWhatIf={() => setIsWhatIfOpen(true)}
+      />
+
+      {/* What-If Scenario Simulator Modal */}
+      <WhatIfSimulator
+        workspaceId={currentWorkspaceId}
+        isOpen={isWhatIfOpen}
+        onClose={() => setIsWhatIfOpen(false)}
+      />
+
+      {/* 30-Second Guided Product Tour for Reviewers */}
+      <ProductTour
+        isOpen={isTourOpen}
+        onClose={() => setIsTourOpen(false)}
+        onSelectTab={setCurrentTab}
+      />
+
       {/* Onboarding Dialog Modal */}
       <OnboardingModal
         isOpen={isOnboardingOpen}
@@ -326,6 +376,7 @@ export function App() {
         }}
       />
     </div>
+  </ErrorBoundary>
   );
 }
 

@@ -86,11 +86,15 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
 
           {/* Main Headline */}
           <div className="space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700">
+              <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Autonomous Market Intelligence for Indian Hardware</span>
+            </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
               Turn Market Intelligence into <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Strategic Advantage</span>
             </h1>
-            <p className="text-lg text-slate-600 font-medium">
-              Explore. Analyse. Decide better.
+            <p className="text-base text-slate-600 font-semibold leading-relaxed">
+              MarketGlitch gives Indian manufacturers an AI strategist that watches competitors, tenders, and trade policy — so you never miss a move.
             </p>
           </div>
 

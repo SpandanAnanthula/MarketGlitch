@@ -23,6 +23,7 @@ interface HeaderProps {
   alerts: WorkspaceAlert[];
   userInitials?: string;
   onNavigateSettings?: () => void;
+  onOpenTour?: () => void;
   onLogout?: () => void;
 }
 
@@ -34,6 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
   alerts = [],
   userInitials = "UY",
   onNavigateSettings,
+  onOpenTour,
   onLogout
 }) => {
   const [isWorkspaceDropdownOpen, setIsWorkspaceDropdownOpen] = useState(false);
@@ -258,6 +260,18 @@ export const Header: React.FC<HeaderProps> = ({
         >
           <Settings className="w-4 h-4" />
         </button>
+
+        {/* Guided Product Tour Button */}
+        {onOpenTour && (
+          <button
+            onClick={onOpenTour}
+            title="30-Second Guided Tour for Judges & Reviewers"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 border border-indigo-200/80 text-xs font-bold text-indigo-700 transition-all shadow-2xs"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+            <span className="hidden sm:inline">Product Tour</span>
+          </button>
+        )}
 
         {/* User Avatar */}
         <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white font-bold text-xs flex items-center justify-center shadow-sm">

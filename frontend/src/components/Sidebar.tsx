@@ -66,18 +66,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <aside className="w-64 bg-[#F8F9FE]/95 backdrop-blur-xl border-r border-slate-200/80 p-5 flex flex-col justify-between shrink-0 select-none">
+    <aside className="w-72 bg-[#F8F9FE]/95 backdrop-blur-xl border-r border-slate-200/80 p-5 flex flex-col justify-between shrink-0 select-none h-full overflow-y-auto">
       <div className="space-y-6">
-        {/* Brand Logo (Matching Image 12 & 3: MarketMind) */}
+        {/* Brand Logo (MarketMind India) */}
         <div className="flex items-center gap-3 px-2 py-1">
-          <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-500 flex items-center justify-center shadow-md shadow-indigo-500/20">
+          <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-500 flex items-center justify-center shadow-md shadow-indigo-500/20 shrink-0">
             <Sparkles className="w-4 h-4 text-white" />
           </div>
-          <div className="flex flex-col">
-            <span className="text-base font-extrabold text-slate-900 tracking-tight">
+          <div className="flex flex-col text-left">
+            <span className="text-base font-extrabold text-slate-900 tracking-tight leading-none">
               MarketMind
             </span>
-            <span className="text-[10px] font-semibold text-indigo-600">India Intelligence</span>
+            <span className="text-[10px] font-semibold text-indigo-600 mt-1">India AI Intelligence</span>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {navSections.map((section, sIdx) => (
             <div key={sIdx} className="space-y-1">
               {section.title && (
-                <div className="px-3 text-[10px] font-bold tracking-wider text-slate-600 uppercase mb-1.5">
+                <div className="px-3 text-[10px] font-bold tracking-wider text-slate-600 uppercase mb-1.5 text-left">
                   {section.title}
                 </div>
               )}
@@ -98,18 +98,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <button
                       key={item.id}
                       onClick={() => onSelectTab(item.id)}
-                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-2xl text-xs font-medium transition-all ${
+                      className={`w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-2xl text-xs transition-all text-left ${
                         isActive
                           ? 'bg-indigo-100/90 text-indigo-700 font-bold shadow-sm shadow-indigo-100'
-                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 font-medium'
                       }`}
                     >
-                      <div className="flex items-center gap-2.5">
-                        <Icon className={`w-4 h-4 ${isActive ? 'text-indigo-600' : 'text-slate-400'}`} />
-                        <span>{item.label}</span>
+                      <div className="flex items-center gap-2.5 min-w-0 text-left flex-1">
+                        <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-indigo-600' : 'text-slate-400'}`} />
+                        <span className="text-left leading-tight truncate block">{item.label}</span>
                       </div>
                       {item.badge && (
-                        <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                        <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ${
                           item.badgeColor || (isActive ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500')
                         }`}>
                           {item.badge}
